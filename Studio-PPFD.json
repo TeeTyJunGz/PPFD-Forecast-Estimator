@@ -38,28 +38,6 @@
         "className": ""
     },
     {
-        "id": "cdaed8ae2747f205",
-        "type": "ui_group",
-        "name": "Weather Station",
-        "tab": "39d55e92981d4819",
-        "order": 1,
-        "disp": true,
-        "width": "12",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "a7c4a247aa77cc90",
-        "type": "ui_group",
-        "name": "PPDF Estimator",
-        "tab": "39d55e92981d4819",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "52bc674c7275dba4",
         "type": "ui_spacer",
         "z": "207ab3a364ea8da7",
