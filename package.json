@@ -1,0 +1,12 @@
+{
+    "name": "Studio-PPFD-Station",
+    "description": "Estimate PPFD value from waether forecast station api.",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "Studio-PPFD.json",
+            "credentialsFile": "Studio-PPFD_cred.json"
+        }
+    }
+}

@@ -1,0 +1,1590 @@
+[
+    {
+        "id": "207ab3a364ea8da7",
+        "type": "tab",
+        "label": "Studio",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "39d55e92981d4819",
+        "type": "ui_tab",
+        "name": "Studio Forecast",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c4d4f20b418aea63",
+        "type": "ui_tab",
+        "name": "Studio Forecast",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8247137b865dfcc2",
+        "type": "ui_group",
+        "name": "Weather Station",
+        "tab": "39d55e92981d4819",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bb6d6c112831a1c0",
+        "type": "ui_group",
+        "name": "PPDF Estimator",
+        "tab": "39d55e92981d4819",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cdaed8ae2747f205",
+        "type": "ui_group",
+        "name": "Weather Station",
+        "tab": "39d55e92981d4819",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a7c4a247aa77cc90",
+        "type": "ui_group",
+        "name": "PPDF Estimator",
+        "tab": "39d55e92981d4819",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "52bc674c7275dba4",
+        "type": "ui_spacer",
+        "z": "207ab3a364ea8da7",
+        "name": "spacer",
+        "group": "8247137b865dfcc2",
+        "order": 4,
+        "width": "1",
+        "height": "2"
+    },
+    {
+        "id": "126af01354999e26",
+        "type": "ui_spacer",
+        "z": "207ab3a364ea8da7",
+        "name": "spacer",
+        "group": "8247137b865dfcc2",
+        "order": 2,
+        "width": "1",
+        "height": "2"
+    },
+    {
+        "id": "8ba13d762ef73207",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "4ff8d3aabc68418d",
+        "type": "http request",
+        "z": "207ab3a364ea8da7",
+        "name": "http request",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.agromonitoring.com/agro/1.0/weather/forecast?lat=13.654476&lon=100.4936764&appid=3798e111094c0420c2ec2495a842223e",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 390,
+        "y": 160,
+        "wires": [
+            [
+                "28f6ccb8659f4ad5",
+                "27ea01a419d7090b",
+                "63a37ef3dbb25b50"
+            ]
+        ]
+    },
+    {
+        "id": "28f6ccb8659f4ad5",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "a3f3f0ed6b9cd905",
+        "type": "inject",
+        "z": "207ab3a364ea8da7",
+        "name": "Inject Unix Timestamp",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1729576800",
+        "payloadType": "num",
+        "x": 180,
+        "y": 840,
+        "wires": [
+            [
+                "5ad90b4c4d33bb42"
+            ]
+        ]
+    },
+    {
+        "id": "5ad90b4c4d33bb42",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "Convert to GMT+7",
+        "func": "// Get the Unix timestamp (in seconds) from the input message payload\nlet unix_timestamp = msg.payload;\n\n// Convert Unix timestamp to milliseconds (as JavaScript Date expects milliseconds)\nlet date = new Date(unix_timestamp * 1000);\n\n// Create a date object for Thailand timezone (GMT+7)\nlet thailandOffset = 7 * 60 * 60 * 1000; // 7 hours in milliseconds\nlet thailandDate = new Date(date.getTime() + thailandOffset);\n\n// Format the date to a readable string\nlet formattedDate = thailandDate.toISOString().replace('T', ' ').split('.')[0];\n\n// Set the formatted date as the output message payload\nmsg.payload = formattedDate;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 840,
+        "wires": [
+            [
+                "b5d1f75b9f65e0d6"
+            ]
+        ]
+    },
+    {
+        "id": "b5d1f75b9f65e0d6",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "Output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "inject1",
+        "type": "inject",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"list\":[{\"dt\":1729328400,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":304.25,\"feels_like\":311.25,\"temp_min\":301.82,\"temp_max\":304.25,\"pressure\":1006,\"sea_level\":1006,\"grnd_level\":1006,\"humidity\":78,\"temp_kf\":2.43},\"wind\":{\"speed\":2.87,\"deg\":180,\"gust\":2.85},\"rain\":{\"3h\":4.64},\"clouds\":{\"all\":100}}]}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "split1",
+        "type": "split",
+        "z": "207ab3a364ea8da7",
+        "d": true,
+        "name": "Split Data",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": "1",
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 580,
+        "y": 1040,
+        "wires": [
+            [
+                "e967080a04332305"
+            ]
+        ]
+    },
+    {
+        "id": "function1",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "Extract Data",
+        "func": "let data = msg.payload.list;  // Access the array inside \"list\" key\n\nif (Array.isArray(data)) {\n    let extractedData = [];\n\n    // Loop through the JSON array and extract numeric data\n    data.forEach(item => {\n        extractedData.push({\n            temp: item.main.temp,\n            pressure: item.main.pressure,\n            humidity: item.main.humidity,\n            windSpeed: item.wind.speed,\n            time: new Date(item.dt * 1000).toLocaleTimeString() // Convert timestamp to readable time\n        });\n    });\n\n    msg.payload = extractedData;\n    return msg;\n} else {\n    node.error(\"Expected an array but got something else\");\n    return null;\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "json1",
+        "type": "json",
+        "z": "207ab3a364ea8da7",
+        "name": "Parse JSON",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 150,
+        "y": 1060,
+        "wires": [
+            [
+                "function1"
+            ]
+        ]
+    },
+    {
+        "id": "460e5458f2c561e8",
+        "type": "inject",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"dt\":1729328400,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":304.25,\"feels_like\":311.25,\"temp_min\":301.82,\"temp_max\":304.25,\"pressure\":1006,\"sea_level\":1006,\"grnd_level\":1006,\"humidity\":78,\"temp_kf\":2.43},\"wind\":{\"speed\":2.87,\"deg\":180,\"gust\":2.85},\"rain\":{\"3h\":4.64},\"clouds\":{\"all\":100}},{\"dt\":1729339200,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":302.9,\"feels_like\":309.9,\"temp_min\":300.19,\"temp_max\":302.9,\"pressure\":1007,\"sea_level\":1007,\"grnd_level\":1008,\"humidity\":81,\"temp_kf\":2.71},\"wind\":{\"speed\":1.62,\"deg\":156,\"gust\":2.41},\"rain\":{\"3h\":5.67},\"clouds\":{\"all\":100}},{\"dt\":1729350000,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":301.39,\"feels_like\":306.38,\"temp_min\":299.96,\"temp_max\":301.39,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1011,\"humidity\":83,\"temp_kf\":1.43},\"wind\":{\"speed\":1.01,\"deg\":140,\"gust\":1.99},\"rain\":{\"3h\":5.36},\"clouds\":{\"all\":100}},{\"dt\":1729360800,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.57,\"feels_like\":299.57,\"temp_min\":299.57,\"temp_max\":299.57,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":86,\"temp_kf\":0},\"wind\":{\"speed\":1.25,\"deg\":108,\"gust\":1.67},\"rain\":{\"3h\":3.08},\"clouds\":{\"all\":100}},{\"dt\":1729371600,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":298.75,\"feels_like\":299.72,\"temp_min\":298.75,\"temp_max\":298.75,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":90,\"temp_kf\":0},\"wind\":{\"speed\":1.61,\"deg\":129,\"gust\":2.74},\"rain\":{\"3h\":4.3},\"clouds\":{\"all\":96}},{\"dt\":1729382400,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":297.87,\"feels_like\":298.85,\"temp_min\":297.87,\"temp_max\":297.87,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1011,\"humidity\":94,\"temp_kf\":0},\"wind\":{\"speed\":1.45,\"deg\":144,\"gust\":2.13},\"rain\":{\"3h\":5.41},\"clouds\":{\"all\":98}},{\"dt\":1729393200,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":300.16,\"feels_like\":303.3,\"temp_min\":300.16,\"temp_max\":300.16,\"pressure\":1013,\"sea_level\":1013,\"grnd_level\":1012,\"humidity\":84,\"temp_kf\":0},\"wind\":{\"speed\":1.93,\"deg\":128,\"gust\":2.08},\"rain\":{\"3h\":2.86},\"clouds\":{\"all\":100}},{\"dt\":1729404000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.88,\"feels_like\":306,\"temp_min\":301.88,\"temp_max\":301.88,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":74,\"temp_kf\":0},\"wind\":{\"speed\":3.34,\"deg\":178,\"gust\":3.69},\"rain\":{\"3h\":1.21},\"clouds\":{\"all\":100}},{\"dt\":1729414800,\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"main\":{\"temp\":302.15,\"feels_like\":306.06,\"temp_min\":302.15,\"temp_max\":302.15,\"pressure\":1008,\"sea_level\":1008,\"grnd_level\":1008,\"humidity\":71,\"temp_kf\":0},\"wind\":{\"speed\":3.62,\"deg\":180,\"gust\":4},\"clouds\":{\"all\":74}},{\"dt\":1729425600,\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04n\"}],\"main\":{\"temp\":300.69,\"feels_like\":304,\"temp_min\":300.69,\"temp_max\":300.69,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1010,\"humidity\":79,\"temp_kf\":0},\"wind\":{\"speed\":3.58,\"deg\":166,\"gust\":5.99},\"clouds\":{\"all\":59}},{\"dt\":1729436400,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.71,\"feels_like\":299.71,\"temp_min\":299.71,\"temp_max\":299.71,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1011,\"humidity\":85,\"temp_kf\":0},\"wind\":{\"speed\":4.78,\"deg\":192,\"gust\":7.87},\"rain\":{\"3h\":5.96},\"clouds\":{\"all\":98}},{\"dt\":1729447200,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.26,\"feels_like\":299.26,\"temp_min\":299.26,\"temp_max\":299.26,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1011,\"humidity\":86,\"temp_kf\":0},\"wind\":{\"speed\":3.45,\"deg\":194,\"gust\":5.82},\"rain\":{\"3h\":6.81},\"clouds\":{\"all\":99}},{\"dt\":1729458000,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":298.15,\"feels_like\":299.11,\"temp_min\":298.15,\"temp_max\":298.15,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1010,\"humidity\":92,\"temp_kf\":0},\"wind\":{\"speed\":1.3,\"deg\":162,\"gust\":2.04},\"rain\":{\"3h\":4.7},\"clouds\":{\"all\":100}},{\"dt\":1729468800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":298.57,\"feels_like\":299.52,\"temp_min\":298.57,\"temp_max\":298.57,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1012,\"humidity\":90,\"temp_kf\":0},\"wind\":{\"speed\":1.5,\"deg\":122,\"gust\":1.99},\"rain\":{\"3h\":1.68},\"clouds\":{\"all\":100}},{\"dt\":1729479600,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":299.49,\"feels_like\":299.49,\"temp_min\":299.49,\"temp_max\":299.49,\"pressure\":1014,\"sea_level\":1014,\"grnd_level\":1013,\"humidity\":86,\"temp_kf\":0},\"wind\":{\"speed\":2.47,\"deg\":101,\"gust\":2.84},\"rain\":{\"3h\":3.04},\"clouds\":{\"all\":94}},{\"dt\":1729490400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":302.45,\"feels_like\":306.75,\"temp_min\":302.45,\"temp_max\":302.45,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":71,\"temp_kf\":0},\"wind\":{\"speed\":3.47,\"deg\":164,\"gust\":3.41},\"rain\":{\"3h\":0.47},\"clouds\":{\"all\":93}},{\"dt\":1729501200,\"weather\":[{\"id\":804,\"main\":\"Clouds\",\"description\":\"overcast clouds\",\"icon\":\"04d\"}],\"main\":{\"temp\":302.07,\"feels_like\":305.89,\"temp_min\":302.07,\"temp_max\":302.07,\"pressure\":1008,\"sea_level\":1008,\"grnd_level\":1008,\"humidity\":71,\"temp_kf\":0},\"wind\":{\"speed\":4.03,\"deg\":188,\"gust\":3.89},\"clouds\":{\"all\":98}},{\"dt\":1729512000,\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04n\"}],\"main\":{\"temp\":300.62,\"feels_like\":303.84,\"temp_min\":300.62,\"temp_max\":300.62,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1010,\"humidity\":79,\"temp_kf\":0},\"wind\":{\"speed\":2.74,\"deg\":170,\"gust\":4},\"clouds\":{\"all\":82}},{\"dt\":1729522800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.11,\"feels_like\":303.08,\"temp_min\":300.11,\"temp_max\":300.11,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1011,\"humidity\":83,\"temp_kf\":0},\"wind\":{\"speed\":2.1,\"deg\":154,\"gust\":3.3},\"rain\":{\"3h\":0.48},\"clouds\":{\"all\":100}},{\"dt\":1729533600,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.62,\"feels_like\":299.62,\"temp_min\":299.62,\"temp_max\":299.62,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":85,\"temp_kf\":0},\"wind\":{\"speed\":1.39,\"deg\":227,\"gust\":1.82},\"rain\":{\"3h\":4.75},\"clouds\":{\"all\":97}},{\"dt\":1729544400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":298.69,\"feels_like\":299.6,\"temp_min\":298.69,\"temp_max\":298.69,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1010,\"humidity\":88,\"temp_kf\":0},\"wind\":{\"speed\":2.42,\"deg\":301,\"gust\":3.25},\"rain\":{\"3h\":1.01},\"clouds\":{\"all\":100}},{\"dt\":1729555200,\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"main\":{\"temp\":298.94,\"feels_like\":299.82,\"temp_min\":298.94,\"temp_max\":298.94,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1011,\"humidity\":86,\"temp_kf\":0},\"wind\":{\"speed\":1.02,\"deg\":10,\"gust\":1.19},\"clouds\":{\"all\":84}},{\"dt\":1729566000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":302.19,\"feels_like\":306.15,\"temp_min\":302.19,\"temp_max\":302.19,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1012,\"humidity\":71,\"temp_kf\":0},\"wind\":{\"speed\":1.1,\"deg\":294,\"gust\":1.11},\"rain\":{\"3h\":0.31},\"clouds\":{\"all\":78}},{\"dt\":1729576800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":304.1,\"feels_like\":308.39,\"temp_min\":304.1,\"temp_max\":304.1,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":62,\"temp_kf\":0},\"wind\":{\"speed\":1.33,\"deg\":23,\"gust\":1.84},\"rain\":{\"3h\":0.24},\"clouds\":{\"all\":88}},{\"dt\":1729587600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.38,\"feels_like\":305.18,\"temp_min\":301.38,\"temp_max\":301.38,\"pressure\":1008,\"sea_level\":1008,\"grnd_level\":1007,\"humidity\":76,\"temp_kf\":0},\"wind\":{\"speed\":1.53,\"deg\":100,\"gust\":1.51},\"rain\":{\"3h\":1},\"clouds\":{\"all\":100}},{\"dt\":1729598400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":301.04,\"feels_like\":304.69,\"temp_min\":301.04,\"temp_max\":301.04,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":78,\"temp_kf\":0},\"wind\":{\"speed\":1.35,\"deg\":107,\"gust\":1.61},\"rain\":{\"3h\":0.15},\"clouds\":{\"all\":94}},{\"dt\":1729609200,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.88,\"feels_like\":304.45,\"temp_min\":300.88,\"temp_max\":300.88,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":79,\"temp_kf\":0},\"wind\":{\"speed\":0.64,\"deg\":154,\"gust\":0.69},\"rain\":{\"3h\":1.44},\"clouds\":{\"all\":100}},{\"dt\":1729620000,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.96,\"feels_like\":302.64,\"temp_min\":299.96,\"temp_max\":299.96,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1010,\"humidity\":82,\"temp_kf\":0},\"wind\":{\"speed\":1.81,\"deg\":118,\"gust\":2.29},\"rain\":{\"3h\":4.88},\"clouds\":{\"all\":100}},{\"dt\":1729630800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":298.95,\"feels_like\":299.86,\"temp_min\":298.95,\"temp_max\":298.95,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":87,\"temp_kf\":0},\"wind\":{\"speed\":2.23,\"deg\":130,\"gust\":3.66},\"rain\":{\"3h\":2.07},\"clouds\":{\"all\":100}},{\"dt\":1729641600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":298.25,\"feels_like\":299.17,\"temp_min\":298.25,\"temp_max\":298.25,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1011,\"humidity\":90,\"temp_kf\":0},\"wind\":{\"speed\":0.6,\"deg\":115,\"gust\":1.18},\"rain\":{\"3h\":1.65},\"clouds\":{\"all\":100}},{\"dt\":1729652400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":300.12,\"feels_like\":302.73,\"temp_min\":300.12,\"temp_max\":300.12,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1012,\"humidity\":79,\"temp_kf\":0},\"wind\":{\"speed\":1.05,\"deg\":85,\"gust\":1.85},\"rain\":{\"3h\":0.37},\"clouds\":{\"all\":97}},{\"dt\":1729663200,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":302.73,\"feels_like\":306.76,\"temp_min\":302.73,\"temp_max\":302.73,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":68,\"temp_kf\":0},\"wind\":{\"speed\":1.62,\"deg\":62,\"gust\":2.16},\"rain\":{\"3h\":2.06},\"clouds\":{\"all\":77}},{\"dt\":1729674000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":302.47,\"feels_like\":306.79,\"temp_min\":302.47,\"temp_max\":302.47,\"pressure\":1008,\"sea_level\":1008,\"grnd_level\":1008,\"humidity\":71,\"temp_kf\":0},\"wind\":{\"speed\":1.8,\"deg\":87,\"gust\":2.67},\"rain\":{\"3h\":1.73},\"clouds\":{\"all\":58}},{\"dt\":1729684800,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.87,\"feels_like\":304.84,\"temp_min\":300.87,\"temp_max\":300.87,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":82,\"temp_kf\":0},\"wind\":{\"speed\":0.77,\"deg\":129,\"gust\":1.19},\"rain\":{\"3h\":3.07},\"clouds\":{\"all\":59}},{\"dt\":1729695600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.03,\"feels_like\":303.07,\"temp_min\":300.03,\"temp_max\":300.03,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1011,\"humidity\":85,\"temp_kf\":0},\"wind\":{\"speed\":1.86,\"deg\":81,\"gust\":3.13},\"rain\":{\"3h\":0.92},\"clouds\":{\"all\":55}},{\"dt\":1729706400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.27,\"feels_like\":299.27,\"temp_min\":299.27,\"temp_max\":299.27,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1010,\"humidity\":86,\"temp_kf\":0},\"wind\":{\"speed\":2.68,\"deg\":72,\"gust\":4.19},\"rain\":{\"3h\":2.26},\"clouds\":{\"all\":46}},{\"dt\":1729717200,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":298.74,\"feels_like\":299.63,\"temp_min\":298.74,\"temp_max\":298.74,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":87,\"temp_kf\":0},\"wind\":{\"speed\":2.18,\"deg\":63,\"gust\":2.87},\"rain\":{\"3h\":1.67},\"clouds\":{\"all\":14}},{\"dt\":1729728000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":298.45,\"feels_like\":299.33,\"temp_min\":298.45,\"temp_max\":298.45,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":88,\"temp_kf\":0},\"wind\":{\"speed\":2.67,\"deg\":14,\"gust\":4},\"rain\":{\"3h\":1.72},\"clouds\":{\"all\":34}},{\"dt\":1729738800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.85,\"feels_like\":305.58,\"temp_min\":301.85,\"temp_max\":301.85,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1011,\"humidity\":72,\"temp_kf\":0},\"wind\":{\"speed\":1.82,\"deg\":4,\"gust\":1.96},\"rain\":{\"3h\":1.26},\"clouds\":{\"all\":8}},{\"dt\":1729749600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":303.74,\"feels_like\":308.1,\"temp_min\":303.74,\"temp_max\":303.74,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":64,\"temp_kf\":0},\"wind\":{\"speed\":0.24,\"deg\":109,\"gust\":0.96},\"rain\":{\"3h\":2.31},\"clouds\":{\"all\":11}}]",
+        "payloadType": "json",
+        "x": 150,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "63a37ef3dbb25b50",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 2",
+        "func": "let input_json = msg.payload;\nlet extractedData = [];\n\nfor (var i = 0; i < 15; i++){\n\n    var dt = input_json[i].dt;\n    var main_temp = input_json[i].main.temp - 273.15;\n    var main_humi = input_json[i].main.humidity;\n\n    let unix_timestamp = dt;\n    let date = new Date(unix_timestamp * 1000);\n    let thailandOffset = 7 * 60 * 60 * 1000; // 7 hours in milliseconds\n    let thailandDate = new Date(date.getTime() + thailandOffset);\n    let formattedDate = thailandDate.toISOString().replace('T', ' ').split('.')[0];\n\n\n    extractedData.push({\n        time: formattedDate,\n        temp: main_temp,\n        humidity: main_humi\n    });\n}\n\nmsg.payload = extractedData;\n\nreturn msg;\n\n// let data = msg.payload.list;  // Access the array inside \"list\" key\n\n// if (Array.isArray(data)) {\n//     let extractedData = [];\n\n//     // Loop through the JSON array and extract numeric data\n//     data.forEach(item => {\n//         extractedData.push({\n//             temp: item.main.temp,\n//             pressure: item.main.pressure,\n//             humidity: item.main.humidity,\n//             windSpeed: item.wind.speed,\n//             time: new Date(item.dt * 1000).toLocaleTimeString() // Convert timestamp to readable time\n//         });\n//     });\n\n//     msg.payload = extractedData;\n//     return msg;\n// } else {\n//     node.error(\"Expected an array but got something else\");\n//     return null;\n// }",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 140,
+        "wires": [
+            [
+                "9d41f96b5540252b",
+                "6ddc2174b3a40b8d"
+            ]
+        ]
+    },
+    {
+        "id": "9d41f96b5540252b",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e967080a04332305",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "d": true,
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "6ddc2174b3a40b8d",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 3",
+        "func": "let dataArray = msg.payload;\n\nlet tempData = [];\nlet humidityData = [];\n\nfor (let i = 0; i < dataArray.length; i++) {\n    let entry = dataArray[i];\n\n    let time = new Date(entry.time).getTime();\n\n    tempData.push({ x: time, y: entry.temp });\n    humidityData.push({ x: time, y: entry.humidity });\n}\n\nmsg.payload = [\n    {\n        series: [\"Temperature\", \"Humidity\"],\n        data: [tempData, humidityData],\n        labels: [\"Temperature\", \"Humidity\"]\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 140,
+        "wires": [
+            [
+                "2614c55d6e32854f",
+                "da876925d83f0cb0"
+            ]
+        ]
+    },
+    {
+        "id": "da876925d83f0cb0",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "27ea01a419d7090b",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 4",
+        "func": "// let input_json = msg.payload;\n// let extractedData = [];\n\n// for (var i = 0; i < 15; i++){\n\n//     var dt = input_json[i].dt;\n//     var main_wind = input_json[i].wind[\"speed\"];\n//     var main_rain = input_json[i].rain[\"3h\"];\n//     var main_cloud = input_json[i].clouds[\"all\"];\n\n//     let unix_timestamp = dt;\n//     let date = new Date(unix_timestamp * 1000);\n//     let thailandOffset = 7 * 60 * 60 * 1000; // 7 hours in milliseconds\n//     let thailandDate = new Date(date.getTime() + thailandOffset);\n//     let formattedDate = thailandDate.toISOString().replace('T', ' ').split('.')[0];\n\n\n//     extractedData.push({\n//         time: formattedDate,\n//         wind: main_wind,\n//         rain: main_rain,\n//         cloud: main_cloud\n//     });\n// }\n\n// msg.payload = extractedData;\n\n// return msg;\n\nlet input_json = msg.payload;\nlet extractedData = [];\n\nfor (var i = 0; i < 15; i++) {\n    var dt = input_json[i].dt;\n    var main_wind = input_json[i].wind ? input_json[i].wind[\"speed\"] : null;\n    var main_rain = (input_json[i].rain && input_json[i].rain[\"3h\"] !== undefined) ? input_json[i].rain[\"3h\"] : null;\n    var main_cloud = input_json[i].clouds ? input_json[i].clouds[\"all\"] : null;\n    var main_humi = input_json[i].main.humidity;\n\n    let unix_timestamp = dt;\n    let date = new Date(unix_timestamp * 1000);\n    let thailandOffset = 7 * 60 * 60 * 1000;\n    let thailandDate = new Date(date.getTime() + thailandOffset);\n    let formattedDate = thailandDate.toISOString().replace('T', ' ').split('.')[0];\n\n    extractedData.push({\n        time: formattedDate,\n        wind: main_wind,\n        rain: main_rain,\n        cloud: main_cloud,\n        humidity: main_humi\n    });\n}\n\nmsg.payload = extractedData;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 180,
+        "wires": [
+            [
+                "c1442b959d97e63a",
+                "bea5a5dd611bd384",
+                "99be1f217d4efccc",
+                "ea6fda21.3aa9e8"
+            ]
+        ]
+    },
+    {
+        "id": "c1442b959d97e63a",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "bea5a5dd611bd384",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 5",
+        "func": "let dataArray = msg.payload;\n\nlet windData = [];\nlet rainData = [];\nlet clouData = [];\n\nfor (let i = 0; i < dataArray.length; i++) {\n    let entry = dataArray[i];\n\n    let time = new Date(entry.time).getTime();\n\n    windData.push({ x: time, y: entry.wind });\n    rainData.push({ x: time, y: entry.rain });\n    clouData.push({ x: time, y: entry.cloud });\n}\n\nmsg.payload = [\n    {\n        series: [\"Wind Speed\", \"Rain Volume\", \"Cloudiness\"],\n        data: [windData, rainData, clouData],\n        labels: [\"Wind Speed\", \"Rain Volume\", \"Cloudiness\"]\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 180,
+        "wires": [
+            [
+                "d32069dae32d524b"
+            ]
+        ]
+    },
+    {
+        "id": "inject_node_id",
+        "type": "inject",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 780,
+        "wires": [
+            [
+                "function_node_id"
+            ]
+        ]
+    },
+    {
+        "id": "function_node_id",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "Set payload",
+        "func": "msg.payload = {\n    name: \"FIBO2\",\n    geo_json: {\n        type: \"Feature\",\n        properties: {},\n        geometry: {\n            type: \"Polygon\",\n            coordinates: [\n                [\n                    [100.49378426712293, 13.654394411298439],\n                    [100.49418422772371, 13.655220964725027],\n                    [100.49539315840835, 13.65476020551263],\n                    [100.49479955172487, 13.654097203081655],\n                    [100.49378426712293, 13.654394411298439]\n                ]\n            ]\n        }\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 780,
+        "wires": [
+            [
+                "http_request_node_id"
+            ]
+        ]
+    },
+    {
+        "id": "http_request_node_id",
+        "type": "http request",
+        "z": "207ab3a364ea8da7",
+        "d": true,
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.agromonitoring.com/agro/1.0/polygons?appid=3798e111094c0420c2ec2495a842223e",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Content-Type",
+                "valueType": "other",
+                "valueValue": "application/json"
+            }
+        ],
+        "x": 500,
+        "y": 780,
+        "wires": [
+            [
+                "debug_node_id"
+            ]
+        ]
+    },
+    {
+        "id": "debug_node_id",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "API Response",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "21dbaf68d66eaca6",
+        "type": "inject",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\":\"671389647a3366cf4f3e4cef\",\"geo_json\":{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Polygon\",\"coordinates\":[[[100.493784,13.654394],[100.4948,13.654097],[100.495393,13.65476],[100.494184,13.655221],[100.493784,13.654394]]]}},\"name\":\"FIBO\",\"center\":[100.49454025,13.654618],\"area\":1.2246,\"user_id\":\"671365e886ec340008b92566\",\"created_at\":1729333604}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33cf4e32841005a9",
+        "type": "http request",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.agromonitoring.com/agro/1.0/uvi?polyid=671389647a3366cf4f3e4cef&appid=3798e111094c0420c2ec2495a842223e",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 390,
+        "y": 520,
+        "wires": [
+            [
+                "62bd94fea6c78af5",
+                "498c623de46f4696"
+            ]
+        ]
+    },
+    {
+        "id": "f47a94bf15c511c8",
+        "type": "inject",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "props": [],
+        "repeat": "10800",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "33cf4e32841005a9",
+                "4ff8d3aabc68418d",
+                "file-in-node-id",
+                "7d1e3134dab74ad6"
+            ]
+        ]
+    },
+    {
+        "id": "62bd94fea6c78af5",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "API Response",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "498c623de46f4696",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 6",
+        "func": "let input_json = msg.payload;\nlet extractedData = [];\n\nvar dt = input_json.dt;\nvar uvi = input_json.uvi;\n\nlet unix_timestamp = dt;\nlet date = new Date(unix_timestamp * 1000);\nlet thailandOffset = 7 * 60 * 60 * 1000; // 7 hours in milliseconds\nlet thailandDate = new Date(date.getTime() + thailandOffset);\nlet formattedDate = thailandDate.toISOString().replace('T', ' ').split('.')[0];\n\nextractedData.push({\n    time: formattedDate,\n    uvi: uvi,\n});\n\nmsg.payload = extractedData;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 520,
+        "wires": [
+            [
+                "692607c706f9d1f7",
+                "1f947d49.c6bb3f"
+            ]
+        ]
+    },
+    {
+        "id": "dc2937731812cfe2",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 7",
+        "func": "let dataArray = msg.payload;\n\nlet uviData = [];\n\nfor (let i = 0; i < dataArray.length; i++) {\n    let entry = dataArray[i];\n\n    let time = new Date(entry.time).getTime();\n\n    uviData.push({ x: time, y: entry.uvi});\n}\n\nmsg.payload = [\n    {\n        series: [\"UVI\"],\n        data: [uviData],\n        labels: [\"UVI\"]\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 580,
+        "wires": [
+            [
+                "d68f695f23808d00"
+            ]
+        ]
+    },
+    {
+        "id": "692607c706f9d1f7",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "6ff3c250ae0b0473",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "17647731028031eb",
+        "type": "inject",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "props": [
+            {
+                "p": "payloadd",
+                "v": "[{\"time\":\"2024-10-19 22:00:00\",\"uvi\":10.95}]",
+                "vt": "json"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[     {         \"dt\": 1729328400,         \"weather\": [             {                 \"id\": 501,                 \"main\": \"Rain\",                 \"description\": \"moderate rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 304.25,             \"feels_like\": 311.25,             \"temp_min\": 301.82,             \"temp_max\": 304.25,             \"pressure\": 1006,             \"sea_level\": 1006,             \"grnd_level\": 1006,             \"humidity\": 78,             \"temp_kf\": 2.43         },         \"wind\": {             \"speed\": 2.87,             \"deg\": 180,             \"gust\": 2.85         },         \"rain\": {             \"3h\": 4.64         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729339200,         \"weather\": [             {                 \"id\": 501,                 \"main\": \"Rain\",                 \"description\": \"moderate rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 302.9,             \"feels_like\": 309.9,             \"temp_min\": 300.19,             \"temp_max\": 302.9,             \"pressure\": 1007,             \"sea_level\": 1007,             \"grnd_level\": 1008,             \"humidity\": 81,             \"temp_kf\": 2.71         },         \"wind\": {             \"speed\": 1.62,             \"deg\": 156,             \"gust\": 2.41         },         \"rain\": {             \"3h\": 5.67         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729350000,         \"weather\": [             {                 \"id\": 501,                 \"main\": \"Rain\",                 \"description\": \"moderate rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 301.39,             \"feels_like\": 306.38,             \"temp_min\": 299.96,             \"temp_max\": 301.39,             \"pressure\": 1009,             \"sea_level\": 1009,             \"grnd_level\": 1011,             \"humidity\": 83,             \"temp_kf\": 1.43         },         \"wind\": {             \"speed\": 1.01,             \"deg\": 140,             \"gust\": 1.99         },         \"rain\": {             \"3h\": 5.36         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729360800,         \"weather\": [             {                 \"id\": 501,                 \"main\": \"Rain\",                 \"description\": \"moderate rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 299.57,             \"feels_like\": 299.57,             \"temp_min\": 299.57,             \"temp_max\": 299.57,             \"pressure\": 1010,             \"sea_level\": 1010,             \"grnd_level\": 1009,             \"humidity\": 86,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.25,             \"deg\": 108,             \"gust\": 1.67         },         \"rain\": {             \"3h\": 3.08         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729371600,         \"weather\": [             {                 \"id\": 501,                 \"main\": \"Rain\",                 \"description\": \"moderate rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 298.75,             \"feels_like\": 299.72,             \"temp_min\": 298.75,             \"temp_max\": 298.75,             \"pressure\": 1009,             \"sea_level\": 1009,             \"grnd_level\": 1009,             \"humidity\": 90,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.61,             \"deg\": 129,             \"gust\": 2.74         },         \"rain\": {             \"3h\": 4.3         },         \"clouds\": {             \"all\": 96         }     },     {         \"dt\": 1729382400,         \"weather\": [             {                 \"id\": 501,                 \"main\": \"Rain\",                 \"description\": \"moderate rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 297.87,             \"feels_like\": 298.85,             \"temp_min\": 297.87,             \"temp_max\": 297.87,             \"pressure\": 1012,             \"sea_level\": 1012,             \"grnd_level\": 1011,             \"humidity\": 94,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.45,             \"deg\": 144,             \"gust\": 2.13         },         \"rain\": {             \"3h\": 5.41         },         \"clouds\": {             \"all\": 98         }     },     {         \"dt\": 1729393200,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 300.16,             \"feels_like\": 303.3,             \"temp_min\": 300.16,             \"temp_max\": 300.16,             \"pressure\": 1013,             \"sea_level\": 1013,             \"grnd_level\": 1012,             \"humidity\": 84,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.93,             \"deg\": 128,             \"gust\": 2.08         },         \"rain\": {             \"3h\": 2.86         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729404000,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 301.88,             \"feels_like\": 306,             \"temp_min\": 301.88,             \"temp_max\": 301.88,             \"pressure\": 1010,             \"sea_level\": 1010,             \"grnd_level\": 1009,             \"humidity\": 74,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 3.34,             \"deg\": 178,             \"gust\": 3.69         },         \"rain\": {             \"3h\": 1.21         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729414800,         \"weather\": [             {                 \"id\": 803,                 \"main\": \"Clouds\",                 \"description\": \"broken clouds\",                 \"icon\": \"04d\"             }         ],         \"main\": {             \"temp\": 302.15,             \"feels_like\": 306.06,             \"temp_min\": 302.15,             \"temp_max\": 302.15,             \"pressure\": 1008,             \"sea_level\": 1008,             \"grnd_level\": 1008,             \"humidity\": 71,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 3.62,             \"deg\": 180,             \"gust\": 4         },         \"clouds\": {             \"all\": 74         }     },     {         \"dt\": 1729425600,         \"weather\": [             {                 \"id\": 803,                 \"main\": \"Clouds\",                 \"description\": \"broken clouds\",                 \"icon\": \"04n\"             }         ],         \"main\": {             \"temp\": 300.69,             \"feels_like\": 304,             \"temp_min\": 300.69,             \"temp_max\": 300.69,             \"pressure\": 1010,             \"sea_level\": 1010,             \"grnd_level\": 1010,             \"humidity\": 79,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 3.58,             \"deg\": 166,             \"gust\": 5.99         },         \"clouds\": {             \"all\": 59         }     },     {         \"dt\": 1729436400,         \"weather\": [             {                 \"id\": 501,                 \"main\": \"Rain\",                 \"description\": \"moderate rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 299.71,             \"feels_like\": 299.71,             \"temp_min\": 299.71,             \"temp_max\": 299.71,             \"pressure\": 1012,             \"sea_level\": 1012,             \"grnd_level\": 1011,             \"humidity\": 85,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 4.78,             \"deg\": 192,             \"gust\": 7.87         },         \"rain\": {             \"3h\": 5.96         },         \"clouds\": {             \"all\": 98         }     },     {         \"dt\": 1729447200,         \"weather\": [             {                 \"id\": 501,                 \"main\": \"Rain\",                 \"description\": \"moderate rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 299.26,             \"feels_like\": 299.26,             \"temp_min\": 299.26,             \"temp_max\": 299.26,             \"pressure\": 1011,             \"sea_level\": 1011,             \"grnd_level\": 1011,             \"humidity\": 86,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 3.45,             \"deg\": 194,             \"gust\": 5.82         },         \"rain\": {             \"3h\": 6.81         },         \"clouds\": {             \"all\": 99         }     },     {         \"dt\": 1729458000,         \"weather\": [             {                 \"id\": 501,                 \"main\": \"Rain\",                 \"description\": \"moderate rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 298.15,             \"feels_like\": 299.11,             \"temp_min\": 298.15,             \"temp_max\": 298.15,             \"pressure\": 1010,             \"sea_level\": 1010,             \"grnd_level\": 1010,             \"humidity\": 92,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.3,             \"deg\": 162,             \"gust\": 2.04         },         \"rain\": {             \"3h\": 4.7         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729468800,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 298.57,             \"feels_like\": 299.52,             \"temp_min\": 298.57,             \"temp_max\": 298.57,             \"pressure\": 1012,             \"sea_level\": 1012,             \"grnd_level\": 1012,             \"humidity\": 90,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.5,             \"deg\": 122,             \"gust\": 1.99         },         \"rain\": {             \"3h\": 1.68         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729479600,         \"weather\": [             {                 \"id\": 501,                 \"main\": \"Rain\",                 \"description\": \"moderate rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 299.49,             \"feels_like\": 299.49,             \"temp_min\": 299.49,             \"temp_max\": 299.49,             \"pressure\": 1014,             \"sea_level\": 1014,             \"grnd_level\": 1013,             \"humidity\": 86,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 2.47,             \"deg\": 101,             \"gust\": 2.84         },         \"rain\": {             \"3h\": 3.04         },         \"clouds\": {             \"all\": 94         }     },     {         \"dt\": 1729490400,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 302.45,             \"feels_like\": 306.75,             \"temp_min\": 302.45,             \"temp_max\": 302.45,             \"pressure\": 1010,             \"sea_level\": 1010,             \"grnd_level\": 1009,             \"humidity\": 71,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 3.47,             \"deg\": 164,             \"gust\": 3.41         },         \"rain\": {             \"3h\": 0.47         },         \"clouds\": {             \"all\": 93         }     },     {         \"dt\": 1729501200,         \"weather\": [             {                 \"id\": 804,                 \"main\": \"Clouds\",                 \"description\": \"overcast clouds\",                 \"icon\": \"04d\"             }         ],         \"main\": {             \"temp\": 302.07,             \"feels_like\": 305.89,             \"temp_min\": 302.07,             \"temp_max\": 302.07,             \"pressure\": 1008,             \"sea_level\": 1008,             \"grnd_level\": 1008,             \"humidity\": 71,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 4.03,             \"deg\": 188,             \"gust\": 3.89         },         \"clouds\": {             \"all\": 98         }     },     {         \"dt\": 1729512000,         \"weather\": [             {                 \"id\": 803,                 \"main\": \"Clouds\",                 \"description\": \"broken clouds\",                 \"icon\": \"04n\"             }         ],         \"main\": {             \"temp\": 300.62,             \"feels_like\": 303.84,             \"temp_min\": 300.62,             \"temp_max\": 300.62,             \"pressure\": 1010,             \"sea_level\": 1010,             \"grnd_level\": 1010,             \"humidity\": 79,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 2.74,             \"deg\": 170,             \"gust\": 4         },         \"clouds\": {             \"all\": 82         }     },     {         \"dt\": 1729522800,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 300.11,             \"feels_like\": 303.08,             \"temp_min\": 300.11,             \"temp_max\": 300.11,             \"pressure\": 1011,             \"sea_level\": 1011,             \"grnd_level\": 1011,             \"humidity\": 83,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 2.1,             \"deg\": 154,             \"gust\": 3.3         },         \"rain\": {             \"3h\": 0.48         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729533600,         \"weather\": [             {                 \"id\": 501,                 \"main\": \"Rain\",                 \"description\": \"moderate rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 299.62,             \"feels_like\": 299.62,             \"temp_min\": 299.62,             \"temp_max\": 299.62,             \"pressure\": 1011,             \"sea_level\": 1011,             \"grnd_level\": 1010,             \"humidity\": 85,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.39,             \"deg\": 227,             \"gust\": 1.82         },         \"rain\": {             \"3h\": 4.75         },         \"clouds\": {             \"all\": 97         }     },     {         \"dt\": 1729544400,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 298.69,             \"feels_like\": 299.6,             \"temp_min\": 298.69,             \"temp_max\": 298.69,             \"pressure\": 1010,             \"sea_level\": 1010,             \"grnd_level\": 1010,             \"humidity\": 88,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 2.42,             \"deg\": 301,             \"gust\": 3.25         },         \"rain\": {             \"3h\": 1.01         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729555200,         \"weather\": [             {                 \"id\": 803,                 \"main\": \"Clouds\",                 \"description\": \"broken clouds\",                 \"icon\": \"04d\"             }         ],         \"main\": {             \"temp\": 298.94,             \"feels_like\": 299.82,             \"temp_min\": 298.94,             \"temp_max\": 298.94,             \"pressure\": 1012,             \"sea_level\": 1012,             \"grnd_level\": 1011,             \"humidity\": 86,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.02,             \"deg\": 10,             \"gust\": 1.19         },         \"clouds\": {             \"all\": 84         }     },     {         \"dt\": 1729566000,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 302.19,             \"feels_like\": 306.15,             \"temp_min\": 302.19,             \"temp_max\": 302.19,             \"pressure\": 1012,             \"sea_level\": 1012,             \"grnd_level\": 1012,             \"humidity\": 71,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.1,             \"deg\": 294,             \"gust\": 1.11         },         \"rain\": {             \"3h\": 0.31         },         \"clouds\": {             \"all\": 78         }     },     {         \"dt\": 1729576800,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 304.1,             \"feels_like\": 308.39,             \"temp_min\": 304.1,             \"temp_max\": 304.1,             \"pressure\": 1009,             \"sea_level\": 1009,             \"grnd_level\": 1009,             \"humidity\": 62,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.33,             \"deg\": 23,             \"gust\": 1.84         },         \"rain\": {             \"3h\": 0.24         },         \"clouds\": {             \"all\": 88         }     },     {         \"dt\": 1729587600,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 301.38,             \"feels_like\": 305.18,             \"temp_min\": 301.38,             \"temp_max\": 301.38,             \"pressure\": 1008,             \"sea_level\": 1008,             \"grnd_level\": 1007,             \"humidity\": 76,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.53,             \"deg\": 100,             \"gust\": 1.51         },         \"rain\": {             \"3h\": 1         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729598400,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 301.04,             \"feels_like\": 304.69,             \"temp_min\": 301.04,             \"temp_max\": 301.04,             \"pressure\": 1010,             \"sea_level\": 1010,             \"grnd_level\": 1009,             \"humidity\": 78,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.35,             \"deg\": 107,             \"gust\": 1.61         },         \"rain\": {             \"3h\": 0.15         },         \"clouds\": {             \"all\": 94         }     },     {         \"dt\": 1729609200,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 300.88,             \"feels_like\": 304.45,             \"temp_min\": 300.88,             \"temp_max\": 300.88,             \"pressure\": 1011,             \"sea_level\": 1011,             \"grnd_level\": 1010,             \"humidity\": 79,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 0.64,             \"deg\": 154,             \"gust\": 0.69         },         \"rain\": {             \"3h\": 1.44         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729620000,         \"weather\": [             {                 \"id\": 501,                 \"main\": \"Rain\",                 \"description\": \"moderate rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 299.96,             \"feels_like\": 302.64,             \"temp_min\": 299.96,             \"temp_max\": 299.96,             \"pressure\": 1010,             \"sea_level\": 1010,             \"grnd_level\": 1010,             \"humidity\": 82,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.81,             \"deg\": 118,             \"gust\": 2.29         },         \"rain\": {             \"3h\": 4.88         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729630800,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 298.95,             \"feels_like\": 299.86,             \"temp_min\": 298.95,             \"temp_max\": 298.95,             \"pressure\": 1010,             \"sea_level\": 1010,             \"grnd_level\": 1009,             \"humidity\": 87,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 2.23,             \"deg\": 130,             \"gust\": 3.66         },         \"rain\": {             \"3h\": 2.07         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729641600,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 298.25,             \"feels_like\": 299.17,             \"temp_min\": 298.25,             \"temp_max\": 298.25,             \"pressure\": 1011,             \"sea_level\": 1011,             \"grnd_level\": 1011,             \"humidity\": 90,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 0.6,             \"deg\": 115,             \"gust\": 1.18         },         \"rain\": {             \"3h\": 1.65         },         \"clouds\": {             \"all\": 100         }     },     {         \"dt\": 1729652400,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 300.12,             \"feels_like\": 302.73,             \"temp_min\": 300.12,             \"temp_max\": 300.12,             \"pressure\": 1012,             \"sea_level\": 1012,             \"grnd_level\": 1012,             \"humidity\": 79,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.05,             \"deg\": 85,             \"gust\": 1.85         },         \"rain\": {             \"3h\": 0.37         },         \"clouds\": {             \"all\": 97         }     },     {         \"dt\": 1729663200,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 302.73,             \"feels_like\": 306.76,             \"temp_min\": 302.73,             \"temp_max\": 302.73,             \"pressure\": 1010,             \"sea_level\": 1010,             \"grnd_level\": 1009,             \"humidity\": 68,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.62,             \"deg\": 62,             \"gust\": 2.16         },         \"rain\": {             \"3h\": 2.06         },         \"clouds\": {             \"all\": 77         }     },     {         \"dt\": 1729674000,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 302.47,             \"feels_like\": 306.79,             \"temp_min\": 302.47,             \"temp_max\": 302.47,             \"pressure\": 1008,             \"sea_level\": 1008,             \"grnd_level\": 1008,             \"humidity\": 71,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.8,             \"deg\": 87,             \"gust\": 2.67         },         \"rain\": {             \"3h\": 1.73         },         \"clouds\": {             \"all\": 58         }     },     {         \"dt\": 1729684800,         \"weather\": [             {                 \"id\": 501,                 \"main\": \"Rain\",                 \"description\": \"moderate rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 300.87,             \"feels_like\": 304.84,             \"temp_min\": 300.87,             \"temp_max\": 300.87,             \"pressure\": 1010,             \"sea_level\": 1010,             \"grnd_level\": 1009,             \"humidity\": 82,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 0.77,             \"deg\": 129,             \"gust\": 1.19         },         \"rain\": {             \"3h\": 3.07         },         \"clouds\": {             \"all\": 59         }     },     {         \"dt\": 1729695600,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 300.03,             \"feels_like\": 303.07,             \"temp_min\": 300.03,             \"temp_max\": 300.03,             \"pressure\": 1011,             \"sea_level\": 1011,             \"grnd_level\": 1011,             \"humidity\": 85,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.86,             \"deg\": 81,             \"gust\": 3.13         },         \"rain\": {             \"3h\": 0.92         },         \"clouds\": {             \"all\": 55         }     },     {         \"dt\": 1729706400,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 299.27,             \"feels_like\": 299.27,             \"temp_min\": 299.27,             \"temp_max\": 299.27,             \"pressure\": 1010,             \"sea_level\": 1010,             \"grnd_level\": 1010,             \"humidity\": 86,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 2.68,             \"deg\": 72,             \"gust\": 4.19         },         \"rain\": {             \"3h\": 2.26         },         \"clouds\": {             \"all\": 46         }     },     {         \"dt\": 1729717200,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10n\"             }         ],         \"main\": {             \"temp\": 298.74,             \"feels_like\": 299.63,             \"temp_min\": 298.74,             \"temp_max\": 298.74,             \"pressure\": 1009,             \"sea_level\": 1009,             \"grnd_level\": 1009,             \"humidity\": 87,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 2.18,             \"deg\": 63,             \"gust\": 2.87         },         \"rain\": {             \"3h\": 1.67         },         \"clouds\": {             \"all\": 14         }     },     {         \"dt\": 1729728000,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 298.45,             \"feels_like\": 299.33,             \"temp_min\": 298.45,             \"temp_max\": 298.45,             \"pressure\": 1011,             \"sea_level\": 1011,             \"grnd_level\": 1010,             \"humidity\": 88,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 2.67,             \"deg\": 14,             \"gust\": 4         },         \"rain\": {             \"3h\": 1.72         },         \"clouds\": {             \"all\": 34         }     },     {         \"dt\": 1729738800,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 301.85,             \"feels_like\": 305.58,             \"temp_min\": 301.85,             \"temp_max\": 301.85,             \"pressure\": 1012,             \"sea_level\": 1012,             \"grnd_level\": 1011,             \"humidity\": 72,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 1.82,             \"deg\": 4,             \"gust\": 1.96         },         \"rain\": {             \"3h\": 1.26         },         \"clouds\": {             \"all\": 8         }     },     {         \"dt\": 1729749600,         \"weather\": [             {                 \"id\": 500,                 \"main\": \"Rain\",                 \"description\": \"light rain\",                 \"icon\": \"10d\"             }         ],         \"main\": {             \"temp\": 303.74,             \"feels_like\": 308.1,             \"temp_min\": 303.74,             \"temp_max\": 303.74,             \"pressure\": 1009,             \"sea_level\": 1009,             \"grnd_level\": 1009,             \"humidity\": 64,             \"temp_kf\": 0         },         \"wind\": {             \"speed\": 0.24,             \"deg\": 109,             \"gust\": 0.96         },         \"rain\": {             \"3h\": 2.31         },         \"clouds\": {             \"all\": 11         }     } ]",
+        "payloadType": "json",
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "file-in-node-id",
+                "7d1e3134dab74ad6"
+            ]
+        ]
+    },
+    {
+        "id": "1f947d49.c6bb3f",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "Merge Data",
+        "func": "let newData = msg.payload;\n\nmsg.payload = JSON.stringify(newData, null, 2);\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 520,
+        "wires": [
+            [
+                "e76f8a8f.a9f2f8",
+                "6ff3c250ae0b0473"
+            ]
+        ]
+    },
+    {
+        "id": "e76f8a8f.a9f2f8",
+        "type": "file",
+        "z": "207ab3a364ea8da7",
+        "name": "Write Data",
+        "filename": "/home/ubuntu/Studio/uvi.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1190,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "file-in-node-id",
+        "type": "file in",
+        "z": "207ab3a364ea8da7",
+        "name": "Read UVI Data",
+        "filename": "/home/ubuntu/Studio/uvi.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "encoding": "utf8",
+        "allProps": false,
+        "x": 380,
+        "y": 580,
+        "wires": [
+            [
+                "function-node-id"
+            ]
+        ]
+    },
+    {
+        "id": "function-node-id",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 8",
+        "func": "// Assuming msg.payload contains the readfile string data\nconst fileContent = msg.payload;\n\n// Use a regex to extract JSON arrays; ensure there's no whitespace issue\nconst jsonStrings = fileContent.match(/\\[[^]*?\\]/g);\n\n// Check if jsonStrings is null (no matches found)\nif (!jsonStrings) {\n    msg.payload = [];\n    return msg;  // Return an empty array if no JSON strings found\n}\n\n// Parse the JSON strings into arrays\nconst arrays = jsonStrings.map(jsonString => JSON.parse(jsonString));\n\n// Combine the arrays into a single array\nconst combinedData = [].concat(...arrays);\n\n// Set the output message payload\nmsg.payload = combinedData;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 580,
+        "wires": [
+            [
+                "dc2937731812cfe2",
+                "a9afafad5542ec30",
+                "6f91e34a5ba1a7cf"
+            ]
+        ]
+    },
+    {
+        "id": "a9afafad5542ec30",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "Calculate PPFD",
+        "func": "// Define conversion factor from UVI to irradiance\nconst uviToIrradianceFactor = 25; // Example factor (W/m² per UVI)\nconst solarConstant = 1000; // Solar constant in W/m² (approximate)\nconst conversionFactor = 4.57; // Conversion factor to PPFD\n\n// Process each UVI entry\nlet results = msg.payload.map(entry => {\n    let uvi = entry.uvi;\n    let irradiance = uvi * uviToIrradianceFactor;\n    let ppfd = irradiance * (conversionFactor / solarConstant);\n    return { time: entry.time, ppfd: ppfd };\n});\n\n// Set results as output\nmsg.payload = results;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 620,
+        "wires": [
+            [
+                "05249c4d4ebbff51",
+                "d2dfc84a4704fa32",
+                "4b69e64749e43d88",
+                "d390d87bb6b32cfd"
+            ]
+        ]
+    },
+    {
+        "id": "05249c4d4ebbff51",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "PPFD Output",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "6f91e34a5ba1a7cf",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "d2dfc84a4704fa32",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 9",
+        "func": "let dataArray = msg.payload;\n\nlet ppfdData = [];\n\nfor (let i = 0; i < dataArray.length; i++) {\n    let entry = dataArray[i];\n\n    let time = new Date(entry.time).getTime();\n\n    ppfdData.push({ x: time, y: entry.ppfd });\n}\n\nmsg.payload = [\n    {\n        series: [\"PPDF\"],\n        data: [ppfdData],\n        labels: [\"PPDF\"]\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 620,
+        "wires": [
+            [
+                "d1be719935459809"
+            ]
+        ]
+    },
+    {
+        "id": "4b69e64749e43d88",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function a",
+        "func": "let dataArray = msg.payload;\nlet last= {}\n\nif (dataArray.length > 0) {\n    last = msg.payload = dataArray[dataArray.length - 1];\n}\n\nmsg.payload = last[\"time\"]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 660,
+        "wires": [
+            [
+                "2698367c6ca7b988"
+            ]
+        ]
+    },
+    {
+        "id": "d390d87bb6b32cfd",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function b",
+        "func": "let dataArray = msg.payload;\nlet last= {}\n\nif (dataArray.length > 0) {\n    last = msg.payload = dataArray[dataArray.length - 1];\n}\n\nmsg.payload = last[\"ppfd\"] + \" umos/sqm/s\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 700,
+        "wires": [
+            [
+                "8b2fcfd923e07548"
+            ]
+        ]
+    },
+    {
+        "id": "ea6fda21.3aa9e8",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "Calculate PPFD",
+        "func": "// Extract weather data\n\nconst PPFD_CLEAR_SKY_NOON = 1000;\nconst RAIN_EFFECT_FACTOR = 0.2;\nconst HUMIDITY_EFFECT_FACTOR = 0.1;\nconst MAX_CLOUD_EFFECT_FACTOR = 0.69; // Maximum effect of clouds (0.8 means 80% PPFD remains)\nconst CLOUDINESS_ADJUSTMENT_FACTOR = 0.5; // 50% weight on cloudiness\n\nlet weatherData = msg.payload;\nvar ft = flow.get('count');\nvar flowtime = ft.results;\nlet ppfdData = []\nlet ti = []\nlet save = []\n\nfor (let i = 0; i < weatherData.length; i++) \n{\n    let entry = weatherData[i];\n    const cloudiness = entry.cloud;  \n\n    let rain_effect = 0;\n\n    if (entry.rain !== undefined) {\n        const rain_mm = entry.rain;\n        rain_effect = Math.min(rain_mm * RAIN_EFFECT_FACTOR, 1); // Convert mm of rain to a reduction factor (capped at 100%)\n    } else {\n        const humidity = entry.humidity;\n        rain_effect = Math.min(humidity * HUMIDITY_EFFECT_FACTOR / 100, 1); // Convert % humidity to a reduction factor (capped at 100%)\n    }\n\n    const sunrise = new Date(flowtime.sunrise);\n    const sunset = new Date(flowtime.sunset);\n    const current_time = new Date(entry.time);\n    \n    const today = new Date();\n    const ctOnlyTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(),\n        current_time.getHours(), current_time.getMinutes(), current_time.getSeconds());\n    const srOnlyTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(),\n        sunrise.getHours(), sunrise.getMinutes(), sunrise.getSeconds());\n    const ssOnlyTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(),\n        sunset.getHours(), sunset.getMinutes(), sunset.getSeconds());\n            \n    if (ctOnlyTime.getTime() < srOnlyTime.getTime() || ctOnlyTime.getTime() > ssOnlyTime.getTime()) {\n        ppfdData.push({ x: current_time.getTime(), y: 0.0 });\n        save.push({\n            time: current_time,\n            daytime: \"false\"\n        })\n    }\n    else {\n        const noon_time = new Date((srOnlyTime.getTime() + ssOnlyTime.getTime()) / 2);\n        const time_difference = Math.abs(ctOnlyTime.getTime() - noon_time.getTime()) / 1000; // Difference in seconds\n        const time_factor = 1 - (time_difference / ((ssOnlyTime.getTime() - srOnlyTime.getTime()) / 2));\n        const ppfd_clear_sky = PPFD_CLEAR_SKY_NOON * Math.max(0.1, time_factor); // Limit time factor\n        \n        const non_linear_cloudiness_effect = (1 - Math.pow((cloudiness / 100), CLOUDINESS_ADJUSTMENT_FACTOR));\n        const adjusted_cloudiness_effect = 1 - ((1 - non_linear_cloudiness_effect) * (1 - MAX_CLOUD_EFFECT_FACTOR));\n\n        const ppfd_adjusted = ppfd_clear_sky * adjusted_cloudiness_effect * (1 - rain_effect);\n        \n        ppfdData.push({ x: current_time.getTime(), y: ppfd_adjusted });\n        save.push({\n            time: current_time,\n            daytime: \"true\"\n        })\n    }\n\n    ti.push(entry.time);\n}\n\nmsg.payload = [\n    {\n        series: [\"PPFD\"],\n        data: [ppfdData],\n        labels: [\"PPFD\"],\n        ti: [ti],\n        sv: [save]\n    }\n];\n\nreturn msg;\n\n// const PPFD_CLEAR_SKY_NOON = 1800; // PPFD at noon with clear sky\n\n// const cloudiness = msg.payload.clouds.all; // % of cloud cover\n// let rain = 0;\n\n// // Check if rain data exists\n// if (msg.payload.rain && msg.payload.rain['3h'] !== undefined) {\n//     rain = msg.payload.rain['3h']; // Use rain data in the last 3 hours\n// } else {\n//     rain = msg.payload.main.humidity; // If no rain data, fallback to humidity\n// }\n\n// // Parse sunrise and sunset times\n// const sunrise = new Date(msg.payload.sunrise_sunset.results.sunrise);\n// const sunset = new Date(msg.payload.sunrise_sunset.results.sunset);\n// const current_time = new Date();\n\n// if (current_time < sunrise || current_time > sunset) {\n//     // Night time, PPFD is 0\n//     msg.payload.ppfd = 0;\n// } else {\n//     // Day time, calculate PPFD\n//     const noon_time = new Date((sunrise.getTime() + sunset.getTime()) / 2);\n//     const time_difference = Math.abs(current_time - noon_time) / 1000;\n//     const time_factor = 1 - (time_difference / ((sunset.getTime() - sunrise.getTime()) / 2));\n//     const ppfd_clear_sky = PPFD_CLEAR_SKY_NOON * Math.max(0.1, time_factor); // Limit time factor\n\n//     const ppfd_adjusted = ppfd_clear_sky * (1 - cloudiness / 100) * (1 - (rain / 100));\n//     msg.payload.ppfd = ppfd_adjusted;\n// }\n\n// return msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 220,
+        "wires": [
+            [
+                "376b727e7520d71d",
+                "e4f8ff1f27746dd7",
+                "248a86c212bce9f1",
+                "97ae196e5ce8db44"
+            ]
+        ]
+    },
+    {
+        "id": "376b727e7520d71d",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "248a86c212bce9f1",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function a",
+        "func": "let dataArray = msg.payload[0].ti;\nlet last= {}\n\nif (dataArray[0].length > 0) {\n    last = msg.payload = dataArray[0][1];\n}\n\nmsg.payload = last;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 260,
+        "wires": [
+            [
+                "c30ff29452dc3175"
+            ]
+        ]
+    },
+    {
+        "id": "97ae196e5ce8db44",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function b",
+        "func": "let dataArray = msg.payload[0].data;\nlet last = {}\n\nif (dataArray[0].length > 0) {\n    last = msg.payload = dataArray[0][1];\n}\n\nmsg.payload = last[\"y\"]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 300,
+        "wires": [
+            [
+                "811ee1e0b484b063"
+            ]
+        ]
+    },
+    {
+        "id": "137cfe7dc2ebf6a4",
+        "type": "inject",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"dt\":1729425600,\"weather\":[{\"id\":804,\"main\":\"Clouds\",\"description\":\"overcast clouds\",\"icon\":\"04n\"}],\"main\":{\"temp\":301.14,\"feels_like\":304.92,\"temp_min\":300.96,\"temp_max\":301.14,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":78,\"temp_kf\":0.18},\"wind\":{\"speed\":5.06,\"deg\":168,\"gust\":8.18},\"clouds\":{\"all\":100}},{\"dt\":1729436400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.99,\"feels_like\":304.71,\"temp_min\":300.7,\"temp_max\":300.99,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1011,\"humidity\":79,\"temp_kf\":0.29},\"wind\":{\"speed\":4.04,\"deg\":165,\"gust\":7.34},\"rain\":{\"3h\":1.16},\"clouds\":{\"all\":100}},{\"dt\":1729447200,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.35,\"feels_like\":303.45,\"temp_min\":299.95,\"temp_max\":300.35,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":81,\"temp_kf\":0.4},\"wind\":{\"speed\":4.25,\"deg\":192,\"gust\":6.91},\"rain\":{\"3h\":7.11},\"clouds\":{\"all\":100}},{\"dt\":1729458000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.38,\"feels_like\":299.38,\"temp_min\":299.38,\"temp_max\":299.38,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":87,\"temp_kf\":0},\"wind\":{\"speed\":1.38,\"deg\":182,\"gust\":1.83},\"rain\":{\"3h\":1.14},\"clouds\":{\"all\":100}},{\"dt\":1729468800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":299.03,\"feels_like\":300.02,\"temp_min\":299.03,\"temp_max\":299.03,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1011,\"humidity\":90,\"temp_kf\":0},\"wind\":{\"speed\":1.55,\"deg\":85,\"gust\":2.23},\"rain\":{\"3h\":0.27},\"clouds\":{\"all\":100}},{\"dt\":1729479600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.97,\"feels_like\":306.6,\"temp_min\":301.97,\"temp_max\":301.97,\"pressure\":1013,\"sea_level\":1013,\"grnd_level\":1012,\"humidity\":76,\"temp_kf\":0},\"wind\":{\"speed\":2.58,\"deg\":157,\"gust\":2.55},\"rain\":{\"3h\":0.7},\"clouds\":{\"all\":98}},{\"dt\":1729490400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":302.68,\"feels_like\":307.51,\"temp_min\":302.68,\"temp_max\":302.68,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1010,\"humidity\":72,\"temp_kf\":0},\"wind\":{\"speed\":3.29,\"deg\":170,\"gust\":3.48},\"rain\":{\"3h\":1.76},\"clouds\":{\"all\":99}},{\"dt\":1729501200,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.34,\"feels_like\":304.93,\"temp_min\":301.34,\"temp_max\":301.34,\"pressure\":1008,\"sea_level\":1008,\"grnd_level\":1008,\"humidity\":75,\"temp_kf\":0},\"wind\":{\"speed\":3.83,\"deg\":166,\"gust\":4.29},\"rain\":{\"3h\":0.51},\"clouds\":{\"all\":100}},{\"dt\":1729512000,\"weather\":[{\"id\":804,\"main\":\"Clouds\",\"description\":\"overcast clouds\",\"icon\":\"04n\"}],\"main\":{\"temp\":300.96,\"feels_like\":304.5,\"temp_min\":300.96,\"temp_max\":300.96,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":78,\"temp_kf\":0},\"wind\":{\"speed\":1.18,\"deg\":169,\"gust\":1.86},\"clouds\":{\"all\":100}},{\"dt\":1729522800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.32,\"feels_like\":303.48,\"temp_min\":300.32,\"temp_max\":300.32,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1011,\"humidity\":82,\"temp_kf\":0},\"wind\":{\"speed\":1.43,\"deg\":146,\"gust\":1.75},\"rain\":{\"3h\":1.1},\"clouds\":{\"all\":97}},{\"dt\":1729533600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.04,\"feels_like\":302.92,\"temp_min\":300.04,\"temp_max\":300.04,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1010,\"humidity\":83,\"temp_kf\":0},\"wind\":{\"speed\":0.98,\"deg\":175,\"gust\":1.04},\"rain\":{\"3h\":0.24},\"clouds\":{\"all\":96}},{\"dt\":1729544400,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.31,\"feels_like\":299.31,\"temp_min\":299.31,\"temp_max\":299.31,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":84,\"temp_kf\":0},\"wind\":{\"speed\":0.23,\"deg\":137,\"gust\":0.95},\"rain\":{\"3h\":5.08},\"clouds\":{\"all\":94}},{\"dt\":1729555200,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":299.12,\"feels_like\":299.12,\"temp_min\":299.12,\"temp_max\":299.12,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":88,\"temp_kf\":0},\"wind\":{\"speed\":1.42,\"deg\":6,\"gust\":1.73},\"rain\":{\"3h\":0.41},\"clouds\":{\"all\":97}},{\"dt\":1729566000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.81,\"feels_like\":306.2,\"temp_min\":301.81,\"temp_max\":301.81,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1012,\"humidity\":76,\"temp_kf\":0},\"wind\":{\"speed\":1.35,\"deg\":321,\"gust\":1.53},\"rain\":{\"3h\":2.77},\"clouds\":{\"all\":100}},{\"dt\":1729576800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":304.74,\"feels_like\":309.01,\"temp_min\":304.74,\"temp_max\":304.74,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":59,\"temp_kf\":0},\"wind\":{\"speed\":1.35,\"deg\":324,\"gust\":1.82},\"rain\":{\"3h\":0.66},\"clouds\":{\"all\":81}},{\"dt\":1729587600,\"weather\":[{\"id\":802,\"main\":\"Clouds\",\"description\":\"scattered clouds\",\"icon\":\"03d\"}],\"main\":{\"temp\":304.95,\"feels_like\":309.19,\"temp_min\":304.95,\"temp_max\":304.95,\"pressure\":1007,\"sea_level\":1007,\"grnd_level\":1007,\"humidity\":58,\"temp_kf\":0},\"wind\":{\"speed\":0.97,\"deg\":264,\"gust\":1.49},\"clouds\":{\"all\":47}},{\"dt\":1729598400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":302.44,\"feels_like\":307.57,\"temp_min\":302.44,\"temp_max\":302.44,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":75,\"temp_kf\":0},\"wind\":{\"speed\":0.43,\"deg\":239,\"gust\":1.15},\"rain\":{\"3h\":1.34},\"clouds\":{\"all\":72}},{\"dt\":1729609200,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.89,\"feels_like\":302.98,\"temp_min\":299.89,\"temp_max\":299.89,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1011,\"humidity\":88,\"temp_kf\":0},\"wind\":{\"speed\":1.35,\"deg\":254,\"gust\":1.99},\"rain\":{\"3h\":6.26},\"clouds\":{\"all\":100}},{\"dt\":1729620000,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.54,\"feels_like\":299.54,\"temp_min\":299.54,\"temp_max\":299.54,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":85,\"temp_kf\":0},\"wind\":{\"speed\":2.73,\"deg\":168,\"gust\":3.65},\"rain\":{\"3h\":5.21},\"clouds\":{\"all\":100}},{\"dt\":1729630800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":298.48,\"feels_like\":299.42,\"temp_min\":298.48,\"temp_max\":298.48,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":90,\"temp_kf\":0},\"wind\":{\"speed\":4.03,\"deg\":232,\"gust\":5.97},\"rain\":{\"3h\":2.4},\"clouds\":{\"all\":99}},{\"dt\":1729641600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":298.61,\"feels_like\":299.48,\"temp_min\":298.61,\"temp_max\":298.61,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1011,\"humidity\":87,\"temp_kf\":0},\"wind\":{\"speed\":1.97,\"deg\":276,\"gust\":2.66},\"rain\":{\"3h\":2.54},\"clouds\":{\"all\":90}},{\"dt\":1729652400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.14,\"feels_like\":304.34,\"temp_min\":301.14,\"temp_max\":301.14,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1012,\"humidity\":74,\"temp_kf\":0},\"wind\":{\"speed\":0.74,\"deg\":26,\"gust\":0.81},\"rain\":{\"3h\":0.56},\"clouds\":{\"all\":81}},{\"dt\":1729663200,\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"main\":{\"temp\":303.08,\"feels_like\":307.32,\"temp_min\":303.08,\"temp_max\":303.08,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":67,\"temp_kf\":0},\"wind\":{\"speed\":1.44,\"deg\":145,\"gust\":1.71},\"clouds\":{\"all\":79}},{\"dt\":1729674000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.66,\"feels_like\":305.67,\"temp_min\":301.66,\"temp_max\":301.66,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1008,\"humidity\":75,\"temp_kf\":0},\"wind\":{\"speed\":2.89,\"deg\":185,\"gust\":2.38},\"rain\":{\"3h\":0.87},\"clouds\":{\"all\":87}},{\"dt\":1729684800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.42,\"feels_like\":303.72,\"temp_min\":300.42,\"temp_max\":300.42,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1010,\"humidity\":82,\"temp_kf\":0},\"wind\":{\"speed\":1.72,\"deg\":184,\"gust\":2.4},\"rain\":{\"3h\":0.11},\"clouds\":{\"all\":60}},{\"dt\":1729695600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.27,\"feels_like\":303.36,\"temp_min\":300.27,\"temp_max\":300.27,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1012,\"humidity\":82,\"temp_kf\":0},\"wind\":{\"speed\":1.1,\"deg\":166,\"gust\":1.19},\"rain\":{\"3h\":0.58},\"clouds\":{\"all\":75}},{\"dt\":1729706400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.06,\"feels_like\":302.78,\"temp_min\":300.06,\"temp_max\":300.06,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":81,\"temp_kf\":0},\"wind\":{\"speed\":0.52,\"deg\":244,\"gust\":0.56},\"rain\":{\"3h\":1.73},\"clouds\":{\"all\":88}},{\"dt\":1729717200,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.14,\"feels_like\":299.14,\"temp_min\":299.14,\"temp_max\":299.14,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":85,\"temp_kf\":0},\"wind\":{\"speed\":1.8,\"deg\":343,\"gust\":2},\"rain\":{\"3h\":2.19},\"clouds\":{\"all\":85}},{\"dt\":1729728000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":298.89,\"feels_like\":299.79,\"temp_min\":298.89,\"temp_max\":298.89,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1011,\"humidity\":87,\"temp_kf\":0},\"wind\":{\"speed\":2.41,\"deg\":13,\"gust\":3.83},\"rain\":{\"3h\":2.68},\"clouds\":{\"all\":87}},{\"dt\":1729738800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.61,\"feels_like\":305.38,\"temp_min\":301.61,\"temp_max\":301.61,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1012,\"humidity\":74,\"temp_kf\":0},\"wind\":{\"speed\":1.3,\"deg\":32,\"gust\":1.55},\"rain\":{\"3h\":0.52},\"clouds\":{\"all\":99}},{\"dt\":1729749600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":303.9,\"feels_like\":307.95,\"temp_min\":303.9,\"temp_max\":303.9,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":62,\"temp_kf\":0},\"wind\":{\"speed\":0.66,\"deg\":92,\"gust\":1.09},\"rain\":{\"3h\":0.89},\"clouds\":{\"all\":100}},{\"dt\":1729760400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":303.48,\"feels_like\":307.76,\"temp_min\":303.48,\"temp_max\":303.48,\"pressure\":1007,\"sea_level\":1007,\"grnd_level\":1007,\"humidity\":65,\"temp_kf\":0},\"wind\":{\"speed\":1.96,\"deg\":262,\"gust\":1.47},\"rain\":{\"3h\":1.46},\"clouds\":{\"all\":88}},{\"dt\":1729771200,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":301.51,\"feels_like\":305.65,\"temp_min\":301.51,\"temp_max\":301.51,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1008,\"humidity\":77,\"temp_kf\":0},\"wind\":{\"speed\":1.1,\"deg\":299,\"gust\":1.72},\"rain\":{\"3h\":1.71},\"clouds\":{\"all\":60}},{\"dt\":1729782000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.76,\"feels_like\":304.43,\"temp_min\":300.76,\"temp_max\":300.76,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":81,\"temp_kf\":0},\"wind\":{\"speed\":1.52,\"deg\":310,\"gust\":1.63},\"rain\":{\"3h\":1.04},\"clouds\":{\"all\":36}},{\"dt\":1729792800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.07,\"feels_like\":302.71,\"temp_min\":300.07,\"temp_max\":300.07,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":80,\"temp_kf\":0},\"wind\":{\"speed\":1.91,\"deg\":283,\"gust\":1.73},\"rain\":{\"3h\":1.83},\"clouds\":{\"all\":23}},{\"dt\":1729803600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":298.58,\"feels_like\":299.5,\"temp_min\":298.58,\"temp_max\":298.58,\"pressure\":1008,\"sea_level\":1008,\"grnd_level\":1008,\"humidity\":89,\"temp_kf\":0},\"wind\":{\"speed\":2.28,\"deg\":317,\"gust\":3.42},\"rain\":{\"3h\":1.09},\"clouds\":{\"all\":79}},{\"dt\":1729814400,\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"main\":{\"temp\":298.56,\"feels_like\":299.48,\"temp_min\":298.56,\"temp_max\":298.56,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":89,\"temp_kf\":0},\"wind\":{\"speed\":2.29,\"deg\":324,\"gust\":3.32},\"clouds\":{\"all\":82}},{\"dt\":1729825200,\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"main\":{\"temp\":302,\"feels_like\":305.73,\"temp_min\":302,\"temp_max\":302,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":71,\"temp_kf\":0},\"wind\":{\"speed\":2.03,\"deg\":321,\"gust\":2.29},\"clouds\":{\"all\":83}},{\"dt\":1729836000,\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"main\":{\"temp\":304.85,\"feels_like\":308.7,\"temp_min\":304.85,\"temp_max\":304.85,\"pressure\":1007,\"sea_level\":1007,\"grnd_level\":1007,\"humidity\":57,\"temp_kf\":0},\"wind\":{\"speed\":2.1,\"deg\":287,\"gust\":2.41},\"clouds\":{\"all\":70}},{\"dt\":1729846800,\"weather\":[{\"id\":801,\"main\":\"Clouds\",\"description\":\"few clouds\",\"icon\":\"02d\"}],\"main\":{\"temp\":305.05,\"feels_like\":308.85,\"temp_min\":305.05,\"temp_max\":305.05,\"pressure\":1005,\"sea_level\":1005,\"grnd_level\":1005,\"humidity\":56,\"temp_kf\":0},\"wind\":{\"speed\":1.78,\"deg\":262,\"gust\":2.06},\"clouds\":{\"all\":22}}]",
+        "payloadType": "json",
+        "x": 310,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "491b52f8f6eae4e0",
+        "type": "inject",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"dt\":1729425600,\"weather\":[{\"id\":804,\"main\":\"Clouds\",\"description\":\"overcast clouds\",\"icon\":\"04n\"}],\"main\":{\"temp\":301.14,\"feels_like\":304.92,\"temp_min\":300.96,\"temp_max\":301.14,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":78,\"temp_kf\":0.18},\"wind\":{\"speed\":5.06,\"deg\":168,\"gust\":8.18},\"clouds\":{\"all\":100}},{\"dt\":1729436400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.99,\"feels_like\":304.71,\"temp_min\":300.7,\"temp_max\":300.99,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1011,\"humidity\":79,\"temp_kf\":0.29},\"wind\":{\"speed\":4.04,\"deg\":165,\"gust\":7.34},\"rain\":{\"3h\":1.16},\"clouds\":{\"all\":100}},{\"dt\":1729447200,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.35,\"feels_like\":303.45,\"temp_min\":299.95,\"temp_max\":300.35,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":81,\"temp_kf\":0.4},\"wind\":{\"speed\":4.25,\"deg\":192,\"gust\":6.91},\"rain\":{\"3h\":7.11},\"clouds\":{\"all\":100}},{\"dt\":1729458000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.38,\"feels_like\":299.38,\"temp_min\":299.38,\"temp_max\":299.38,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":87,\"temp_kf\":0},\"wind\":{\"speed\":1.38,\"deg\":182,\"gust\":1.83},\"rain\":{\"3h\":1.14},\"clouds\":{\"all\":100}},{\"dt\":1729468800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":299.03,\"feels_like\":300.02,\"temp_min\":299.03,\"temp_max\":299.03,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1011,\"humidity\":90,\"temp_kf\":0},\"wind\":{\"speed\":1.55,\"deg\":85,\"gust\":2.23},\"rain\":{\"3h\":0.27},\"clouds\":{\"all\":100}},{\"dt\":1729479600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.97,\"feels_like\":306.6,\"temp_min\":301.97,\"temp_max\":301.97,\"pressure\":1013,\"sea_level\":1013,\"grnd_level\":1012,\"humidity\":76,\"temp_kf\":0},\"wind\":{\"speed\":2.58,\"deg\":157,\"gust\":2.55},\"rain\":{\"3h\":0.7},\"clouds\":{\"all\":98}},{\"dt\":1729490400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":302.68,\"feels_like\":307.51,\"temp_min\":302.68,\"temp_max\":302.68,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1010,\"humidity\":72,\"temp_kf\":0},\"wind\":{\"speed\":3.29,\"deg\":170,\"gust\":3.48},\"rain\":{\"3h\":1.76},\"clouds\":{\"all\":99}},{\"dt\":1729501200,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.34,\"feels_like\":304.93,\"temp_min\":301.34,\"temp_max\":301.34,\"pressure\":1008,\"sea_level\":1008,\"grnd_level\":1008,\"humidity\":75,\"temp_kf\":0},\"wind\":{\"speed\":3.83,\"deg\":166,\"gust\":4.29},\"rain\":{\"3h\":0.51},\"clouds\":{\"all\":100}},{\"dt\":1729512000,\"weather\":[{\"id\":804,\"main\":\"Clouds\",\"description\":\"overcast clouds\",\"icon\":\"04n\"}],\"main\":{\"temp\":300.96,\"feels_like\":304.5,\"temp_min\":300.96,\"temp_max\":300.96,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":78,\"temp_kf\":0},\"wind\":{\"speed\":1.18,\"deg\":169,\"gust\":1.86},\"clouds\":{\"all\":100}},{\"dt\":1729522800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.32,\"feels_like\":303.48,\"temp_min\":300.32,\"temp_max\":300.32,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1011,\"humidity\":82,\"temp_kf\":0},\"wind\":{\"speed\":1.43,\"deg\":146,\"gust\":1.75},\"rain\":{\"3h\":1.1},\"clouds\":{\"all\":97}},{\"dt\":1729533600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.04,\"feels_like\":302.92,\"temp_min\":300.04,\"temp_max\":300.04,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1010,\"humidity\":83,\"temp_kf\":0},\"wind\":{\"speed\":0.98,\"deg\":175,\"gust\":1.04},\"rain\":{\"3h\":0.24},\"clouds\":{\"all\":96}},{\"dt\":1729544400,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.31,\"feels_like\":299.31,\"temp_min\":299.31,\"temp_max\":299.31,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":84,\"temp_kf\":0},\"wind\":{\"speed\":0.23,\"deg\":137,\"gust\":0.95},\"rain\":{\"3h\":5.08},\"clouds\":{\"all\":94}},{\"dt\":1729555200,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":299.12,\"feels_like\":299.12,\"temp_min\":299.12,\"temp_max\":299.12,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":88,\"temp_kf\":0},\"wind\":{\"speed\":1.42,\"deg\":6,\"gust\":1.73},\"rain\":{\"3h\":0.41},\"clouds\":{\"all\":97}},{\"dt\":1729566000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.81,\"feels_like\":306.2,\"temp_min\":301.81,\"temp_max\":301.81,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1012,\"humidity\":76,\"temp_kf\":0},\"wind\":{\"speed\":1.35,\"deg\":321,\"gust\":1.53},\"rain\":{\"3h\":2.77},\"clouds\":{\"all\":100}},{\"dt\":1729576800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":304.74,\"feels_like\":309.01,\"temp_min\":304.74,\"temp_max\":304.74,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":59,\"temp_kf\":0},\"wind\":{\"speed\":1.35,\"deg\":324,\"gust\":1.82},\"rain\":{\"3h\":0.66},\"clouds\":{\"all\":81}},{\"dt\":1729587600,\"weather\":[{\"id\":802,\"main\":\"Clouds\",\"description\":\"scattered clouds\",\"icon\":\"03d\"}],\"main\":{\"temp\":304.95,\"feels_like\":309.19,\"temp_min\":304.95,\"temp_max\":304.95,\"pressure\":1007,\"sea_level\":1007,\"grnd_level\":1007,\"humidity\":58,\"temp_kf\":0},\"wind\":{\"speed\":0.97,\"deg\":264,\"gust\":1.49},\"clouds\":{\"all\":47}},{\"dt\":1729598400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":302.44,\"feels_like\":307.57,\"temp_min\":302.44,\"temp_max\":302.44,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":75,\"temp_kf\":0},\"wind\":{\"speed\":0.43,\"deg\":239,\"gust\":1.15},\"rain\":{\"3h\":1.34},\"clouds\":{\"all\":72}},{\"dt\":1729609200,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.89,\"feels_like\":302.98,\"temp_min\":299.89,\"temp_max\":299.89,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1011,\"humidity\":88,\"temp_kf\":0},\"wind\":{\"speed\":1.35,\"deg\":254,\"gust\":1.99},\"rain\":{\"3h\":6.26},\"clouds\":{\"all\":100}},{\"dt\":1729620000,\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.54,\"feels_like\":299.54,\"temp_min\":299.54,\"temp_max\":299.54,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":85,\"temp_kf\":0},\"wind\":{\"speed\":2.73,\"deg\":168,\"gust\":3.65},\"rain\":{\"3h\":5.21},\"clouds\":{\"all\":100}},{\"dt\":1729630800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":298.48,\"feels_like\":299.42,\"temp_min\":298.48,\"temp_max\":298.48,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":90,\"temp_kf\":0},\"wind\":{\"speed\":4.03,\"deg\":232,\"gust\":5.97},\"rain\":{\"3h\":2.4},\"clouds\":{\"all\":99}},{\"dt\":1729641600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":298.61,\"feels_like\":299.48,\"temp_min\":298.61,\"temp_max\":298.61,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1011,\"humidity\":87,\"temp_kf\":0},\"wind\":{\"speed\":1.97,\"deg\":276,\"gust\":2.66},\"rain\":{\"3h\":2.54},\"clouds\":{\"all\":90}},{\"dt\":1729652400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.14,\"feels_like\":304.34,\"temp_min\":301.14,\"temp_max\":301.14,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1012,\"humidity\":74,\"temp_kf\":0},\"wind\":{\"speed\":0.74,\"deg\":26,\"gust\":0.81},\"rain\":{\"3h\":0.56},\"clouds\":{\"all\":81}},{\"dt\":1729663200,\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"main\":{\"temp\":303.08,\"feels_like\":307.32,\"temp_min\":303.08,\"temp_max\":303.08,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":67,\"temp_kf\":0},\"wind\":{\"speed\":1.44,\"deg\":145,\"gust\":1.71},\"clouds\":{\"all\":79}},{\"dt\":1729674000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.66,\"feels_like\":305.67,\"temp_min\":301.66,\"temp_max\":301.66,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1008,\"humidity\":75,\"temp_kf\":0},\"wind\":{\"speed\":2.89,\"deg\":185,\"gust\":2.38},\"rain\":{\"3h\":0.87},\"clouds\":{\"all\":87}},{\"dt\":1729684800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.42,\"feels_like\":303.72,\"temp_min\":300.42,\"temp_max\":300.42,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1010,\"humidity\":82,\"temp_kf\":0},\"wind\":{\"speed\":1.72,\"deg\":184,\"gust\":2.4},\"rain\":{\"3h\":0.11},\"clouds\":{\"all\":60}},{\"dt\":1729695600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.27,\"feels_like\":303.36,\"temp_min\":300.27,\"temp_max\":300.27,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1012,\"humidity\":82,\"temp_kf\":0},\"wind\":{\"speed\":1.1,\"deg\":166,\"gust\":1.19},\"rain\":{\"3h\":0.58},\"clouds\":{\"all\":75}},{\"dt\":1729706400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.06,\"feels_like\":302.78,\"temp_min\":300.06,\"temp_max\":300.06,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":81,\"temp_kf\":0},\"wind\":{\"speed\":0.52,\"deg\":244,\"gust\":0.56},\"rain\":{\"3h\":1.73},\"clouds\":{\"all\":88}},{\"dt\":1729717200,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":299.14,\"feels_like\":299.14,\"temp_min\":299.14,\"temp_max\":299.14,\"pressure\":1010,\"sea_level\":1010,\"grnd_level\":1009,\"humidity\":85,\"temp_kf\":0},\"wind\":{\"speed\":1.8,\"deg\":343,\"gust\":2},\"rain\":{\"3h\":2.19},\"clouds\":{\"all\":85}},{\"dt\":1729728000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":298.89,\"feels_like\":299.79,\"temp_min\":298.89,\"temp_max\":298.89,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1011,\"humidity\":87,\"temp_kf\":0},\"wind\":{\"speed\":2.41,\"deg\":13,\"gust\":3.83},\"rain\":{\"3h\":2.68},\"clouds\":{\"all\":87}},{\"dt\":1729738800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":301.61,\"feels_like\":305.38,\"temp_min\":301.61,\"temp_max\":301.61,\"pressure\":1012,\"sea_level\":1012,\"grnd_level\":1012,\"humidity\":74,\"temp_kf\":0},\"wind\":{\"speed\":1.3,\"deg\":32,\"gust\":1.55},\"rain\":{\"3h\":0.52},\"clouds\":{\"all\":99}},{\"dt\":1729749600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":303.9,\"feels_like\":307.95,\"temp_min\":303.9,\"temp_max\":303.9,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":62,\"temp_kf\":0},\"wind\":{\"speed\":0.66,\"deg\":92,\"gust\":1.09},\"rain\":{\"3h\":0.89},\"clouds\":{\"all\":100}},{\"dt\":1729760400,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10d\"}],\"main\":{\"temp\":303.48,\"feels_like\":307.76,\"temp_min\":303.48,\"temp_max\":303.48,\"pressure\":1007,\"sea_level\":1007,\"grnd_level\":1007,\"humidity\":65,\"temp_kf\":0},\"wind\":{\"speed\":1.96,\"deg\":262,\"gust\":1.47},\"rain\":{\"3h\":1.46},\"clouds\":{\"all\":88}},{\"dt\":1729771200,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":301.51,\"feels_like\":305.65,\"temp_min\":301.51,\"temp_max\":301.51,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1008,\"humidity\":77,\"temp_kf\":0},\"wind\":{\"speed\":1.1,\"deg\":299,\"gust\":1.72},\"rain\":{\"3h\":1.71},\"clouds\":{\"all\":60}},{\"dt\":1729782000,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.76,\"feels_like\":304.43,\"temp_min\":300.76,\"temp_max\":300.76,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":81,\"temp_kf\":0},\"wind\":{\"speed\":1.52,\"deg\":310,\"gust\":1.63},\"rain\":{\"3h\":1.04},\"clouds\":{\"all\":36}},{\"dt\":1729792800,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":300.07,\"feels_like\":302.71,\"temp_min\":300.07,\"temp_max\":300.07,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":80,\"temp_kf\":0},\"wind\":{\"speed\":1.91,\"deg\":283,\"gust\":1.73},\"rain\":{\"3h\":1.83},\"clouds\":{\"all\":23}},{\"dt\":1729803600,\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"}],\"main\":{\"temp\":298.58,\"feels_like\":299.5,\"temp_min\":298.58,\"temp_max\":298.58,\"pressure\":1008,\"sea_level\":1008,\"grnd_level\":1008,\"humidity\":89,\"temp_kf\":0},\"wind\":{\"speed\":2.28,\"deg\":317,\"gust\":3.42},\"rain\":{\"3h\":1.09},\"clouds\":{\"all\":79}},{\"dt\":1729814400,\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"main\":{\"temp\":298.56,\"feels_like\":299.48,\"temp_min\":298.56,\"temp_max\":298.56,\"pressure\":1009,\"sea_level\":1009,\"grnd_level\":1009,\"humidity\":89,\"temp_kf\":0},\"wind\":{\"speed\":2.29,\"deg\":324,\"gust\":3.32},\"clouds\":{\"all\":82}},{\"dt\":1729825200,\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"main\":{\"temp\":302,\"feels_like\":305.73,\"temp_min\":302,\"temp_max\":302,\"pressure\":1011,\"sea_level\":1011,\"grnd_level\":1010,\"humidity\":71,\"temp_kf\":0},\"wind\":{\"speed\":2.03,\"deg\":321,\"gust\":2.29},\"clouds\":{\"all\":83}},{\"dt\":1729836000,\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"main\":{\"temp\":304.85,\"feels_like\":308.7,\"temp_min\":304.85,\"temp_max\":304.85,\"pressure\":1007,\"sea_level\":1007,\"grnd_level\":1007,\"humidity\":57,\"temp_kf\":0},\"wind\":{\"speed\":2.1,\"deg\":287,\"gust\":2.41},\"clouds\":{\"all\":70}},{\"dt\":1729846800,\"weather\":[{\"id\":801,\"main\":\"Clouds\",\"description\":\"few clouds\",\"icon\":\"02d\"}],\"main\":{\"temp\":305.05,\"feels_like\":308.85,\"temp_min\":305.05,\"temp_max\":305.05,\"pressure\":1005,\"sea_level\":1005,\"grnd_level\":1005,\"humidity\":56,\"temp_kf\":0},\"wind\":{\"speed\":1.78,\"deg\":262,\"gust\":2.06},\"clouds\":{\"all\":22}}]",
+        "payloadType": "json",
+        "x": 410,
+        "y": 300,
+        "wires": [
+            [
+                "63a37ef3dbb25b50",
+                "27ea01a419d7090b",
+                "28f6ccb8659f4ad5"
+            ]
+        ]
+    },
+    {
+        "id": "7d1e3134dab74ad6",
+        "type": "http request",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.sunrise-sunset.org/json?lat=13.654476&lng=100.4936764&formatted=0",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "d7d1171e182356a0"
+            ]
+        ]
+    },
+    {
+        "id": "0de42ab8d69aee56",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "Calculate PPFD",
+        "func": "// Extract weather data\nlet weatherData = msg.payload;\nlet ppfdData = []\nlet ti = []\nfor (let i = 0; i < weatherData.length; i++) \n{\n    let entry = weatherData[i];\n    let time = new Date(entry.time).getTime();\n    let clouds = entry.cloud;\n\n    let irradiance;\n    if (clouds === 100) {\n        irradiance = 100;\n    } else {\n        irradiance = 1000 * (1 - (clouds / 100));\n    }\n\n    let PAR = irradiance * 0.45;\n    let PPFD = PAR * 4.57;\n\n    ppfdData.push({ x: time, y: PPFD });\n    ti.push(entry.time);\n}\n\nmsg.payload = [\n    {\n        series: [\"PPFD\"],\n        data: [ppfdData],\n        labels: [\"PPFD\"],\n        ti: [ti]\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2f70feba91a2846",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d7d1171e182356a0",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 11",
+        "func": "flow.set('count', msg.payload);\nmsg.payload = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 340,
+        "wires": [
+            [
+                "a31044bf9ac9f7ee"
+            ]
+        ]
+    },
+    {
+        "id": "99be1f217d4efccc",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 12",
+        "func": "var ft = flow.get('count');\n\nvar flowtime = ft.results;\n\nfunction normalizeTime(date) {\n    const normalized = new Date(); // Use current date to normalize\n    normalized.setHours(date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds(), 0); // Set time from the input\n    return normalized;\n}\n\nconst sunrise = new Date(flowtime.sunrise);\nconst sunset = new Date(flowtime.sunset);\nconst current_time = new Date(msg.payload[0].time);\n\n// const srutcPlus7 = normalizeTime(new Date(sunrise.getTime() + 7 * 60 * 60 * 1000));\n// const ssutcPlus7 = normalizeTime(new Date(sunset.getTime() + 7 * 60 * 60 * 1000));\n\nconst srutcPlus7 = new Date(sunrise.getTime() + 7 * 60 * 60 * 1000);\nconst ssutcPlus7 = new Date(sunset.getTime() + 7 * 60 * 60 * 1000);\n\nconst nrcr = new Date(current_time).toISOString().substring(11, 19);\nconst nrsr = new Date(srutcPlus7).toISOString().substring(11, 19);\nconst nrss = new Date(ssutcPlus7).toISOString().substring(11, 19);\n\nlet tt = []\n\n\ntt.push({\n    ct: nrcr,\n    sr: nrsr,\n    ss: nrss,\n    ct_sr: nrcr > nrsr,\n    ct_ss: nrcr > nrss,\n    sr_ss: nrsr > nrss\n})\n\nlet weatherData = msg.payload;\nlet save = []\nfor (let i = 0; i < weatherData.length; i++) {\n\n    let entry = weatherData[i];\n\n    const sunrise = new Date(flowtime.sunrise);\n    const sunset = new Date(flowtime.sunset);\n    const current_time = new Date(entry.time);\n\n    // const srutcPlus7 = new Date(sunrise.getTime() + 7 * 60 * 60 * 1000);\n    // const ssutcPlus7 = new Date(sunset.getTime() + 7 * 60 * 60 * 1000);\n    const srutcPlus7 = new Date(flowtime.sunrise);\n    const ssutcPlus7 = new Date(flowtime.sunset);\n    // let runix_timestamp = sunrise.getTime();\n    // let rdate = new Date(runix_timestamp * 1000);\n    // let rthailandOffset = 7 * 60 * 60 * 1000;\n    // let rthailandDate = new Date(rdate.getTime() + rthailandOffset);\n    // let srutcPlus7 = rthailandDate.toISOString().replace('T', ' ').split('.')[0];\n\n    // let sunix_timestamp = sunset.getTime();\n    // let sdate = new Date(sunix_timestamp * 1000);\n    // let sthailandOffset = 7 * 60 * 60 * 1000;\n    // let sthailandDate = new Date(sdate.getTime() + sthailandOffset);\n    // let ssutcPlus7 = sthailandDate.toISOString().replace('T', ' ').split('.')[0];\n\n    const today = new Date();\n    const ctOnlyTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(),\n        current_time.getHours(), current_time.getMinutes(), current_time.getSeconds());\n    const srOnlyTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(),\n        srutcPlus7.getHours(), srutcPlus7.getMinutes(), srutcPlus7.getSeconds());\n    const ssOnlyTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(),\n        ssutcPlus7.getHours(), ssutcPlus7.getMinutes(), ssutcPlus7.getSeconds());\n\n    const sunrise_time = new Date(srutcPlus7).toISOString().substring(11, 19);\n    const sunsett_time = new Date(ssutcPlus7).toISOString().substring(11, 19);\n\n    const cal_current_time = new Date(entry.time).toISOString().substring(11, 19);\n\n    if (ctOnlyTime.getTime() < srOnlyTime.getTime() || ctOnlyTime.getTime() > ssOnlyTime.getTime()) {\n        save.push({\n            time: ctOnlyTime.getTime(),\n            timer: srOnlyTime.getTime(),\n            times: ssOnlyTime.getTime(),\n            daytime: \"false\"\n        })\n    }\n    else {\n        save.push({\n            time: ctOnlyTime.getTime(),\n            timer: srOnlyTime.getTime(),\n            times: ssOnlyTime.getTime(),\n            daytime: \"true\"\n        })\n    }\n\n}\nmsg.payload = save;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 380,
+        "wires": [
+            [
+                "c2f70feba91a2846"
+            ]
+        ]
+    },
+    {
+        "id": "a31044bf9ac9f7ee",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "2698367c6ca7b988",
+        "type": "ui_text",
+        "z": "207ab3a364ea8da7",
+        "group": "bb6d6c112831a1c0",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "Last PPFD Time:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1350,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "8b2fcfd923e07548",
+        "type": "ui_text",
+        "z": "207ab3a364ea8da7",
+        "group": "bb6d6c112831a1c0",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "PPFD: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1310,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "c30ff29452dc3175",
+        "type": "ui_text",
+        "z": "207ab3a364ea8da7",
+        "group": "bb6d6c112831a1c0",
+        "order": 5,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "3 hr. PPFD Time:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1350,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "811ee1e0b484b063",
+        "type": "ui_text",
+        "z": "207ab3a364ea8da7",
+        "group": "bb6d6c112831a1c0",
+        "order": 6,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "PPFD: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1310,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2614c55d6e32854f",
+        "type": "ui_chart",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "group": "8247137b865dfcc2",
+        "order": 1,
+        "width": "12",
+        "height": "6",
+        "label": "Temperature Humidity Charts",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "dd HH:mm",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1240,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d32069dae32d524b",
+        "type": "ui_chart",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "group": "8247137b865dfcc2",
+        "order": 3,
+        "width": "12",
+        "height": "6",
+        "label": "Wind Rain Cloud Charts",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "dd HH:mm",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff7f0e",
+            "#98df80",
+            "#9467bd",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1230,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d68f695f23808d00",
+        "type": "ui_chart",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "group": "8247137b865dfcc2",
+        "order": 5,
+        "width": "12",
+        "height": "6",
+        "label": "UV Index",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "dd HH:mm",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff9896",
+            "#98df80",
+            "#9467bd",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1180,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d1be719935459809",
+        "type": "ui_chart",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "group": "bb6d6c112831a1c0",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "label": "PPDF from UV Index",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "dd HH:mm",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff9500",
+            "#98df80",
+            "#9467bd",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1360,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4f8ff1f27746dd7",
+        "type": "ui_chart",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "group": "bb6d6c112831a1c0",
+        "order": 4,
+        "width": "6",
+        "height": "6",
+        "label": "PPDF from Forecast Stations",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "dd HH:mm",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff9500",
+            "#98df80",
+            "#9467bd",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1240,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "55a1176975f3b3bd",
+        "type": "inject",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 890,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    }
+]
