@@ -658,7 +658,7 @@
         "z": "207ab3a364ea8da7",
         "name": "",
         "props": [],
-        "repeat": "10800",
+        "repeat": "3600",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
