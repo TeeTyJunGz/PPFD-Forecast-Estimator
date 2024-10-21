@@ -177,7 +177,8 @@
             [
                 "28f6ccb8659f4ad5",
                 "27ea01a419d7090b",
-                "63a37ef3dbb25b50"
+                "63a37ef3dbb25b50",
+                "5602f15e826999c0"
             ]
         ]
     },
@@ -396,7 +397,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 900,
-        "y": 60,
+        "y": 100,
         "wires": []
     },
     {
@@ -1566,5 +1567,42 @@
         "x": 120,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "5602f15e826999c0",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "Data json",
+        "func": "let newData = msg.payload;\n\nmsg.payload = JSON.stringify(newData, null, 2);\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 100,
+        "wires": [
+            [
+                "ca68f655e20dbe3e"
+            ]
+        ]
+    },
+    {
+        "id": "ca68f655e20dbe3e",
+        "type": "file",
+        "z": "207ab3a364ea8da7",
+        "name": "Write Data",
+        "filename": "/home/ubuntu/Studio/forecast.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 910,
+        "y": 60,
+        "wires": [
+            []
+        ]
     }
 ]
