@@ -659,7 +659,7 @@
         "props": [],
         "repeat": "10800",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "x": 130,
