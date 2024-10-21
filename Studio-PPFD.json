@@ -16,14 +16,6 @@
         "hidden": false
     },
     {
-        "id": "c4d4f20b418aea63",
-        "type": "ui_tab",
-        "name": "Studio Forecast",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "8247137b865dfcc2",
         "type": "ui_group",
         "name": "Weather Station",
