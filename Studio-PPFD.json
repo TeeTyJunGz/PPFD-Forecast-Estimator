@@ -1833,7 +1833,8 @@
         "y": 1560,
         "wires": [
             [
-                "bb3695137deadf05"
+                "bb3695137deadf05",
+                "fe9ad94d1918b8c5"
             ]
         ]
     },
@@ -1852,5 +1853,89 @@
         "x": 620,
         "y": 1620,
         "wires": []
+    },
+    {
+        "id": "fe9ad94d1918b8c5",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 14",
+        "func": "// Assuming msg.payload contains the readfile string data\nconst fileContent = msg.payload;\n\n// Use a regex to extract JSON arrays; ensure there's no whitespace issue\nconst jsonStrings = fileContent.match(/\\[[^]*?\\]/g);\n\n// Check if jsonStrings is null (no matches found)\nif (!jsonStrings) {\n    msg.payload = [];\n    return msg;  // Return an empty array if no JSON strings found\n}\n\n// Parse the JSON strings into arrays\nconst arrays = jsonStrings.map(jsonString => JSON.parse(jsonString));\n\n// Combine the arrays into a single array\nconst combinedData = [].concat(...arrays);\n\n// Set the output message payload\nmsg.payload = combinedData;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1560,
+        "wires": [
+            [
+                "d5ad0f0bd1076128"
+            ]
+        ]
+    },
+    {
+        "id": "d5ad0f0bd1076128",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 16",
+        "func": "let dataArray = msg.payload;\n\nlet tslData = [];\n\nfor (let i = 0; i < dataArray.length; i++) {\n    let entry = dataArray[i];\n\n    let time = new Date(entry.timestamp).getTime();\n\n    tslData.push({ x: time, y: entry.value});\n}\n\nmsg.payload = [\n    {\n        series: [\"TSL\"],\n        data: [tslData],\n        labels: [\"TSL\"]\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 1560,
+        "wires": [
+            [
+                "6e948e3431f5e22e"
+            ]
+        ]
+    },
+    {
+        "id": "6e948e3431f5e22e",
+        "type": "ui_chart",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "group": "ae15be0907e349e6",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1030,
+        "y": 1560,
+        "wires": [
+            []
+        ]
     }
 ]
