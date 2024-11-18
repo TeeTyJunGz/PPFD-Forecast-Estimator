@@ -1833,23 +1833,7 @@
         "y": 1560,
         "wires": [
             [
-                "parse-json"
-            ]
-        ]
-    },
-    {
-        "id": "parse-json",
-        "type": "json",
-        "z": "207ab3a364ea8da7",
-        "name": "Parse JSON",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 620,
-        "y": 1560,
-        "wires": [
-            [
-                "format-data"
+                "bb3695137deadf05"
             ]
         ]
     },
@@ -1860,11 +1844,12 @@
         "name": "Format Data",
         "func": "let data = msg.payload;\nmsg.payload = `Value: ${data.value}\\nTimestamp: ${data.timestamp}`;\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 800,
+        "x": 810,
         "y": 1560,
         "wires": [
             [
@@ -1889,8 +1874,24 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 980,
+        "x": 990,
         "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "bb3695137deadf05",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 1620,
         "wires": []
     }
 ]
