@@ -1785,7 +1785,7 @@
         "type": "function",
         "z": "207ab3a364ea8da7",
         "name": "function 13",
-        "func": "let data = {\n    value: parseFloat(msg.payload),\n    timestamp: new Date().toISOString()\n};\nmsg.payload = [JSON.stringify(data, null, 2)]; // Pretty print JSON\nreturn msg;",
+        "func": "let data = {\n    value: parseFloat(msg.payload),\n    timestamp: new Date().toISOString()\n};\nlet arrdata = []\n\narrdata.push(JSON.stringify(data, null, 2))\nmsg.payload = arrdata; // Pretty print JSON\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
