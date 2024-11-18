@@ -206,6 +206,24 @@
         "className": ""
     },
     {
+        "id": "dashboard-group",
+        "type": "ui_group",
+        "name": "My Dashboard Group",
+        "tab": "dashboard-tab",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "dashboard-tab",
+        "type": "ui_tab",
+        "name": "My Dashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "4ff8d3aabc68418d",
         "type": "http request",
         "z": "207ab3a364ea8da7",
@@ -1696,7 +1714,9 @@
         "wires": [
             [
                 "93d580df53a5c88f",
-                "135b464eaf61e628"
+                "135b464eaf61e628",
+                "5be4a2f5c9c2bae8",
+                "read-file"
             ]
         ]
     },
@@ -1713,7 +1733,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 420,
-        "y": 1500,
+        "y": 1440,
         "wires": []
     },
     {
@@ -1754,10 +1774,121 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 410,
-        "y": 1560,
+        "x": 190,
+        "y": 1640,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "5be4a2f5c9c2bae8",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 13",
+        "func": "let data = {\n    value: parseFloat(msg.payload),\n    timestamp: new Date().toISOString()\n};\nmsg.payload = JSON.stringify(data, null, 2); // Pretty print JSON\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1500,
+        "wires": [
+            [
+                "bebf4086ecb9e4f1"
+            ]
+        ]
+    },
+    {
+        "id": "bebf4086ecb9e4f1",
+        "type": "file",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "filename": "/home/ubuntu/Studio/tsl.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 680,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "read-file",
+        "type": "file in",
+        "z": "207ab3a364ea8da7",
+        "name": "Read JSON File",
+        "filename": "/home/pi/data.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 440,
+        "y": 1560,
+        "wires": [
+            [
+                "parse-json"
+            ]
+        ]
+    },
+    {
+        "id": "parse-json",
+        "type": "json",
+        "z": "207ab3a364ea8da7",
+        "name": "Parse JSON",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 620,
+        "y": 1560,
+        "wires": [
+            [
+                "format-data"
+            ]
+        ]
+    },
+    {
+        "id": "format-data",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "Format Data",
+        "func": "let data = msg.payload;\nmsg.payload = `Value: ${data.value}\\nTimestamp: ${data.timestamp}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1560,
+        "wires": [
+            [
+                "dashboard-text"
+            ]
+        ]
+    },
+    {
+        "id": "dashboard-text",
+        "type": "ui_text",
+        "z": "207ab3a364ea8da7",
+        "group": "ae15be0907e349e6",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Display Data",
+        "label": "Latest Data",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 980,
+        "y": 1560,
+        "wires": []
     }
 ]
