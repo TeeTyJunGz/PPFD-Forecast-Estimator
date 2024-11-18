@@ -1785,7 +1785,7 @@
         "type": "function",
         "z": "207ab3a364ea8da7",
         "name": "function 13",
-        "func": "let data = {\n    value: parseFloat(msg.payload),\n    timestamp: new Date().toISOString()\n};\nmsg.payload = JSON.stringify(data, null, 2); // Pretty print JSON\nreturn msg;",
+        "func": "let data = {\n    value: parseFloat(msg.payload),\n    timestamp: new Date().toISOString()\n};\nmsg.payload = [JSON.stringify(data, null, 2)]; // Pretty print JSON\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1836,47 +1836,6 @@
                 "bb3695137deadf05"
             ]
         ]
-    },
-    {
-        "id": "format-data",
-        "type": "function",
-        "z": "207ab3a364ea8da7",
-        "name": "Format Data",
-        "func": "let data = msg.payload;\nmsg.payload = `Value: ${data.value}\\nTimestamp: ${data.timestamp}`;\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 810,
-        "y": 1560,
-        "wires": [
-            [
-                "dashboard-text"
-            ]
-        ]
-    },
-    {
-        "id": "dashboard-text",
-        "type": "ui_text",
-        "z": "207ab3a364ea8da7",
-        "group": "ae15be0907e349e6",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "Display Data",
-        "label": "Latest Data",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 990,
-        "y": 1560,
-        "wires": []
     },
     {
         "id": "bb3695137deadf05",
