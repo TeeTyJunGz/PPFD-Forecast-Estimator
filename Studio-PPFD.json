@@ -156,6 +156,37 @@
         }
     },
     {
+        "id": "9b1d7af935f13bc3",
+        "type": "mqtt-broker",
+        "name": "RaspQTT",
+        "broker": "0.tcp.ap.ngrok.io",
+        "port": "16717",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
         "id": "4ff8d3aabc68418d",
         "type": "http request",
         "z": "207ab3a364ea8da7",
@@ -1627,5 +1658,42 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "50091a3c14ae2b2e",
+        "type": "mqtt in",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "topic": "tsl2561",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9b1d7af935f13bc3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 1500,
+        "wires": [
+            [
+                "93d580df53a5c88f"
+            ]
+        ]
+    },
+    {
+        "id": "93d580df53a5c88f",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 1500,
+        "wires": []
     }
 ]
