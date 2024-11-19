@@ -1960,7 +1960,7 @@
         "type": "debug",
         "z": "207ab3a364ea8da7",
         "name": "debug 21",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
