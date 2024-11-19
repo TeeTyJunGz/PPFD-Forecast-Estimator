@@ -1971,8 +1971,25 @@
         "y": 1680,
         "wires": [
             [
-                "6e948e3431f5e22e"
+                "6e948e3431f5e22e",
+                "d02ee3f8d605efa1"
             ]
         ]
+    },
+    {
+        "id": "d02ee3f8d605efa1",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 1680,
+        "wires": []
     }
 ]
