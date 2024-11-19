@@ -1927,7 +1927,7 @@
         "type": "function",
         "z": "207ab3a364ea8da7",
         "name": "function 17",
-        "func": "let lines = msg.payload.split(\"\\n\").filter(line => line.trim() !== \"\"); // Split lines and filter out empty ones\n\nlet parsedData = [];\nlines.forEach(line => {\n    try {\n        let parsedLine = JSON.parse(line); // Try parsing each line\n        parsedData.push(parsedLine);\n    } catch (err) {\n        node.warn(`Failed to parse line: ${line}`);\n    }\n});\n\n// Format the data for the chart\nlet chartData = {\n    series: [\"Light Intensity\"],\n    data: [\n        parsedData.map(item => ({\n            x: new Date(item.timestamp).toISOString(),\n            y: item.value\n        }))\n    ],\n    labels: []\n};\n\nmsg.payload = chartData;\nreturn msg;\n",
+        "func": "// Read the file content and split by newlines\nlet lines = msg.payload.trim().split(\"\\n\");\n\n// Parse each line into a JSON object\nlet parsedData = [];\nlines.forEach(line => {\n    try {\n        let obj = JSON.parse(line);\n        parsedData.push(obj); // Add valid objects to the array\n    } catch (e) {\n        node.warn(`Invalid JSON line skipped: ${line}`);\n    }\n});\n\n// Assign the parsed data to msg.payload\nmsg.payload = parsedData;\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
