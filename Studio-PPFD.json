@@ -1995,7 +1995,7 @@
         "type": "function",
         "z": "207ab3a364ea8da7",
         "name": "function 19",
-        "func": "// Assuming msg.payload contains the readfile string data\nconst fileContent = msg.payload;\n\n// Use regex to extract JSON arrays; include handling line breaks and multiple arrays\nconst jsonStrings = fileContent.match(/\\[[\\s\\S]*?\\]/g);\n\nif (!jsonStrings) {\n    msg.payload = []; // If no arrays are found, return an empty array\n    return msg;\n}\n\ntry {\n    // Parse and combine the arrays into a single array\n    const combinedData = jsonStrings.flatMap(jsonString => JSON.parse(jsonString));\n    msg.payload = combinedData; // Set the output message payload\n} catch (error) {\n    // msg.error = error.message; // Capture parsing error\n    msg.payload = []; // Return an empty array in case of failure\n}\n\nreturn msg;\n",
+        "func": "// Assuming msg.payload contains the readfile string data\nconst fileContent = msg.payload;\n\n// Use regex to extract JSON arrays; include handling line breaks and multiple arrays\nconst jsonStrings = fileContent.match(/\\[[\\s\\S]*?\\]/g);\n\nif (!jsonStrings) {\n    msg.payload = []; // If no arrays are found, return an empty array\n    return msg;\n}\n\ntry {\n    // Parse and combine the arrays into a single array\n    const combinedData = jsonStrings.flatMap(jsonString => JSON.parse(jsonString));\n    msg.payload = combinedData; // Set the output message payload\n} catch (error) {\n    msg.error = error.message; // Capture parsing error\n    msg.payload = []; // Return an empty array in case of failure\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
