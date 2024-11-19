@@ -899,7 +899,7 @@
         "y": 580,
         "wires": [
             [
-                "function-node-id"
+                "445016a1d9bba79a"
             ]
         ]
     },
@@ -919,8 +919,6 @@
         "y": 580,
         "wires": [
             [
-                "dc2937731812cfe2",
-                "a9afafad5542ec30",
                 "6f91e34a5ba1a7cf"
             ]
         ]
@@ -1989,6 +1987,28 @@
             [
                 "d02ee3f8d605efa1",
                 "6e948e3431f5e22e"
+            ]
+        ]
+    },
+    {
+        "id": "445016a1d9bba79a",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 19",
+        "func": "// Assuming msg.payload contains the readfile string data\nconst fileContent = msg.payload;\n\n// Use regex to extract JSON arrays; include handling line breaks and multiple arrays\nconst jsonStrings = fileContent.match(/\\[[\\s\\S]*?\\]/g);\n\nif (!jsonStrings) {\n    msg.payload = []; // If no arrays are found, return an empty array\n    return msg;\n}\n\ntry {\n    // Parse and combine the arrays into a single array\n    const combinedData = jsonStrings.flatMap(jsonString => JSON.parse(jsonString));\n    msg.payload = combinedData; // Set the output message payload\n} catch (error) {\n    // msg.error = error.message; // Capture parsing error\n    msg.payload = []; // Return an empty array in case of failure\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 640,
+        "wires": [
+            [
+                "dc2937731812cfe2",
+                "a9afafad5542ec30",
+                "6f91e34a5ba1a7cf"
             ]
         ]
     }
