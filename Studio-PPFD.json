@@ -1815,7 +1815,7 @@
         "y": 1560,
         "wires": [
             [
-                "b2ea69de896f86ff"
+                "dce9f54181d81543"
             ]
         ]
     },
@@ -1923,76 +1923,39 @@
         ]
     },
     {
-        "id": "b2ea69de896f86ff",
-        "type": "split",
-        "z": "207ab3a364ea8da7",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "property": "payload",
-        "x": 610,
-        "y": 1560,
-        "wires": [
-            [
-                "d3e95d2a6af2e51b"
-            ]
-        ]
-    },
-    {
-        "id": "d3e95d2a6af2e51b",
-        "type": "json",
-        "z": "207ab3a364ea8da7",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 750,
-        "y": 1560,
-        "wires": [
-            [
-                "cbf64d79bfcb3241",
-                "516982f6a65f59e3"
-            ]
-        ]
-    },
-    {
-        "id": "cbf64d79bfcb3241",
-        "type": "debug",
-        "z": "207ab3a364ea8da7",
-        "name": "debug 20",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 900,
-        "y": 1560,
-        "wires": []
-    },
-    {
-        "id": "516982f6a65f59e3",
+        "id": "dce9f54181d81543",
         "type": "function",
         "z": "207ab3a364ea8da7",
         "name": "function 17",
-        "func": "let chartData = flow.get(\"chartData\") || { series: [\"Light Intensity\"], data: [[]], labels: [] };\nchartData.data[0].push({ x: new Date(msg.payload.timestamp).toISOString(), y: msg.payload.value });\nflow.set(\"chartData\", chartData);\n\nmsg.payload = chartData;\nreturn msg;\n",
+        "func": "// Split the file content by newlines and parse each line\nlet lines = msg.payload.split(\"\\n\").filter(line => line.trim() !== \"\");\nlet parsedData = lines.map(line => JSON.parse(line));\n\n// Format data for the chart\nlet chartData = {\n    series: [\"Light Intensity\"],\n    data: [\n        parsedData.map(item => ({\n            x: new Date(item.timestamp).toISOString(),\n            y: item.value\n        }))\n    ],\n    labels: []\n};\n\nmsg.payload = chartData;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
-        "y": 1620,
+        "x": 630,
+        "y": 1560,
         "wires": [
             [
-                "6e948e3431f5e22e"
+                "8ca17d2d1327f791"
             ]
         ]
+    },
+    {
+        "id": "8ca17d2d1327f791",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1560,
+        "wires": []
     }
 ]
