@@ -160,7 +160,7 @@
         "type": "mqtt-broker",
         "name": "RaspQTT",
         "broker": "0.tcp.ap.ngrok.io",
-        "port": "18221",
+        "port": "13179",
         "clientid": "",
         "autoConnect": true,
         "usetls": false,
