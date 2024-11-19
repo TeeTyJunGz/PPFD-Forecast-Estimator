@@ -1897,7 +1897,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1050,
+        "x": 1110,
         "y": 1720,
         "wires": [
             []
@@ -1954,7 +1954,8 @@
         "y": 1560,
         "wires": [
             [
-                "cbf64d79bfcb3241"
+                "cbf64d79bfcb3241",
+                "516982f6a65f59e3"
             ]
         ]
     },
@@ -1973,5 +1974,25 @@
         "x": 900,
         "y": 1560,
         "wires": []
+    },
+    {
+        "id": "516982f6a65f59e3",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 17",
+        "func": "let chartData = flow.get(\"chartData\") || { series: [\"Light Intensity\"], data: [[]], labels: [] };\nchartData.data[0].push({ x: new Date(msg.payload.timestamp).toISOString(), y: msg.payload.value });\nflow.set(\"chartData\", chartData);\n\nmsg.payload = chartData;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 1620,
+        "wires": [
+            [
+                "6e948e3431f5e22e"
+            ]
+        ]
     }
 ]
