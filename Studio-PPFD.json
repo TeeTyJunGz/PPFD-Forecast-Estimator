@@ -1902,5 +1902,24 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "25e5f3b03081fc27",
+        "type": "inject",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 210,
+        "y": 1600,
+        "wires": [
+            [
+                "read-file"
+            ]
+        ]
     }
 ]
