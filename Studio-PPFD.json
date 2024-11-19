@@ -1815,8 +1815,7 @@
         "y": 1560,
         "wires": [
             [
-                "dce9f54181d81543",
-                "fb3815cdd724a59b"
+                "dce9f54181d81543"
             ]
         ]
     },
@@ -1935,7 +1934,8 @@
         "y": 1560,
         "wires": [
             [
-                "8ca17d2d1327f791"
+                "8ca17d2d1327f791",
+                "0dad4474635c5f0e"
             ]
         ]
     },
@@ -1956,27 +1956,6 @@
         "wires": []
     },
     {
-        "id": "fb3815cdd724a59b",
-        "type": "function",
-        "z": "207ab3a364ea8da7",
-        "name": "function 18",
-        "func": "// Parse the incoming file content (multi-line JSON file)\nlet lines = msg.payload.trim().split(\"\\n\"); // Split into lines\n\n// Transform lines into objects and prepare chart data\nlet chartData = {\n    series: [\"Light Intensity\"],\n    data: [[]], // Data array for the series\n    labels: [] // Labels can remain empty for time series\n};\n\nlines.forEach(line => {\n    try {\n        let obj = JSON.parse(line.trim());\n        if (obj.timestamp && obj.value !== undefined) {\n            // Add a valid data point to the chart\n            chartData.data[0].push({ x: obj.timestamp, y: obj.value });\n        }\n    } catch (err) {\n        // node.warn(`Invalid JSON line skipped: ${line}`);\n    }\n});\n\n// Pass the chart data to the next node\nmsg.payload = chartData;\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 850,
-        "y": 1680,
-        "wires": [
-            [
-                "6e948e3431f5e22e",
-                "d02ee3f8d605efa1"
-            ]
-        ]
-    },
-    {
         "id": "d02ee3f8d605efa1",
         "type": "debug",
         "z": "207ab3a364ea8da7",
@@ -1991,5 +1970,25 @@
         "x": 1080,
         "y": 1680,
         "wires": []
+    },
+    {
+        "id": "0dad4474635c5f0e",
+        "type": "function",
+        "z": "207ab3a364ea8da7",
+        "name": "function 18",
+        "func": "let dataArray = msg.payload;\n\nlet tslData = [];\n\nfor (let i = 0; i < dataArray.length; i++) {\n    let entry = dataArray[i];\n\n    let time = new Date(entry.timestamp).getTime();\n\n    tslData.push({ x: time, y: entry.value});\n}\n\nmsg.payload = [\n    {\n        series: [\"TSL\"],\n        data: [tslData],\n        labels: [\"TSL\"]\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1680,
+        "wires": [
+            [
+                "d02ee3f8d605efa1"
+            ]
+        ]
     }
 ]
