@@ -1815,7 +1815,7 @@
         "y": 1560,
         "wires": [
             [
-                "fe9ad94d1918b8c5"
+                "b2ea69de896f86ff"
             ]
         ]
     },
@@ -1831,8 +1831,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
-        "y": 1560,
+        "x": 610,
+        "y": 1720,
         "wires": [
             [
                 "d5ad0f0bd1076128"
@@ -1851,8 +1851,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 1560,
+        "x": 850,
+        "y": 1720,
         "wires": [
             [
                 "6e948e3431f5e22e"
@@ -1897,8 +1897,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1070,
-        "y": 1560,
+        "x": 1050,
+        "y": 1720,
         "wires": [
             []
         ]
@@ -1921,5 +1921,57 @@
                 "read-file"
             ]
         ]
+    },
+    {
+        "id": "b2ea69de896f86ff",
+        "type": "split",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 610,
+        "y": 1560,
+        "wires": [
+            [
+                "d3e95d2a6af2e51b"
+            ]
+        ]
+    },
+    {
+        "id": "d3e95d2a6af2e51b",
+        "type": "json",
+        "z": "207ab3a364ea8da7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 750,
+        "y": 1560,
+        "wires": [
+            [
+                "cbf64d79bfcb3241"
+            ]
+        ]
+    },
+    {
+        "id": "cbf64d79bfcb3241",
+        "type": "debug",
+        "z": "207ab3a364ea8da7",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 1560,
+        "wires": []
     }
 ]
