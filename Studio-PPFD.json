@@ -1852,10 +1852,7 @@
         "x": 850,
         "y": 1720,
         "wires": [
-            [
-                "6e948e3431f5e22e",
-                "76defdbf41c0b114"
-            ]
+            []
         ]
     },
     {
@@ -1938,7 +1935,7 @@
         "wires": [
             [
                 "8ca17d2d1327f791",
-                "d5ad0f0bd1076128"
+                "fb3815cdd724a59b"
             ]
         ]
     },
@@ -1959,19 +1956,23 @@
         "wires": []
     },
     {
-        "id": "76defdbf41c0b114",
-        "type": "debug",
+        "id": "fb3815cdd724a59b",
+        "type": "function",
         "z": "207ab3a364ea8da7",
-        "name": "debug 21",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1060,
-        "y": 1660,
-        "wires": []
+        "name": "function 18",
+        "func": "let chartData = {\n    series: [\"Light Intensity\"],\n    data: [\n        msg.payload.map(item => ({\n            x: item.timestamp,\n            y: item.value\n        }))\n    ],\n    labels: []\n};\n\nmsg.payload = chartData;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1680,
+        "wires": [
+            [
+                "6e948e3431f5e22e"
+            ]
+        ]
     }
 ]
