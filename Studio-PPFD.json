@@ -2170,7 +2170,7 @@
         "type": "mqtt in",
         "z": "c97600c5743cf14d",
         "name": "OBD2 Data",
-        "topic": "obd2",
+        "topic": "odb2",
         "qos": "0",
         "datatype": "auto",
         "broker": "9b1d7af935f13bc3",
