@@ -8,6 +8,13 @@
         "env": []
     },
     {
+        "id": "c97600c5743cf14d",
+        "type": "tab",
+        "label": "OBD2 Dashboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "39d55e92981d4819",
         "type": "ui_tab",
         "name": "Studio Forecast",
@@ -204,6 +211,152 @@
         "width": "12",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "be0e5e8fdb0fa7e2",
+        "type": "ui_group",
+        "name": "OBD2 Data",
+        "tab": "8c49f5afc3a5e5a5",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "0c2de6584e3508b7",
+        "type": "ui-group",
+        "name": "Speed",
+        "page": "0e1544e8ee74d03d",
+        "width": "12",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "05a462b0cf99d3e6",
+        "type": "ui-group",
+        "name": "Coolant Temperature",
+        "page": "0e1544e8ee74d03d",
+        "width": "12",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "e79ee6bac316da24",
+        "type": "ui-group",
+        "name": "Throttle and Battery",
+        "page": "0e1544e8ee74d03d",
+        "width": "12",
+        "height": "1",
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "a8e0ef50f11b5878",
+        "type": "ui-group",
+        "name": "Select Car Brand",
+        "page": "0e1544e8ee74d03d",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "8c49f5afc3a5e5a5",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0e1544e8ee74d03d",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "e82469d18d4af5a6",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "c19a8ffe56ee43c9",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "e82469d18d4af5a6",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "showPageTitle": true,
+        "navigationStyle": "default",
+        "titleBarStyle": "default"
+    },
+    {
+        "id": "c19a8ffe56ee43c9",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#a049da",
+            "primary": "#ffffff",
+            "bgPage": "#fefbfb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#8982e3"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
     },
     {
         "id": "4ff8d3aabc68418d",
@@ -2011,5 +2164,413 @@
                 "6f91e34a5ba1a7cf"
             ]
         ]
+    },
+    {
+        "id": "2ba757054b3d274f",
+        "type": "mqtt in",
+        "z": "c97600c5743cf14d",
+        "name": "OBD2 Data",
+        "topic": "obd2",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "9b1d7af935f13bc3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 120,
+        "wires": [
+            [
+                "3c59665ae017be63",
+                "c66c40709fa5da12"
+            ]
+        ]
+    },
+    {
+        "id": "3c59665ae017be63",
+        "type": "json",
+        "z": "c97600c5743cf14d",
+        "name": "Parse JSON",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 340,
+        "y": 120,
+        "wires": [
+            [
+                "7c42fec254cd0723"
+            ]
+        ]
+    },
+    {
+        "id": "7c42fec254cd0723",
+        "type": "function",
+        "z": "c97600c5743cf14d",
+        "name": "Extract OBD2 Data",
+        "func": "let rpm = { payload: msg.payload.RPM, topic: \"RPM\" };\nlet speed = { payload: msg.payload.Speed, topic: \"Speed\" };\nlet coolantTemp = { payload: msg.payload.CoolantTemp, topic: \"Coolant Temperature\" };\nlet throttlePos = { payload: msg.payload.ThrottlePos, topic: \"Throttle Position\" };\nlet batteryVoltage = { payload: msg.payload.BatteryVoltage, topic: \"Battery Voltage\" };\nlet errorCodes = { payload: msg.payload.ErrorCodes, topic: \"Error Codes\" };\n\nreturn [rpm, speed, coolantTemp, throttlePos, batteryVoltage, errorCodes];",
+        "outputs": 6,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 120,
+        "wires": [
+            [
+                "4583534ea36a7a91"
+            ],
+            [
+                "ab579ddb6df70c6e"
+            ],
+            [
+                "8c85626141424870"
+            ],
+            [
+                "7e27fbc9254ee84c"
+            ],
+            [
+                "f738c0c70352312d"
+            ],
+            [
+                "45996f70a9bbcf34"
+            ]
+        ]
+    },
+    {
+        "id": "c66c40709fa5da12",
+        "type": "debug",
+        "z": "c97600c5743cf14d",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "4583534ea36a7a91",
+        "type": "ui-gauge",
+        "z": "c97600c5743cf14d",
+        "name": "RPM",
+        "group": "0c2de6584e3508b7",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "RPM",
+        "units": "RPM",
+        "icon": "engine",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#a7d9db"
+            },
+            {
+                "from": "5000",
+                "color": "#2a3560"
+            },
+            {
+                "from": "6900",
+                "color": "#ca3838"
+            }
+        ],
+        "min": 0,
+        "max": "8000",
+        "sizeThickness": 16,
+        "sizeGap": "4",
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 830,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "ab579ddb6df70c6e",
+        "type": "ui-gauge",
+        "z": "c97600c5743cf14d",
+        "name": "Speed",
+        "group": "0c2de6584e3508b7",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Speed",
+        "units": "km/h",
+        "icon": "car",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#a7d9db"
+            },
+            {
+                "from": "80",
+                "color": "#2a3560"
+            },
+            {
+                "from": "150",
+                "color": "#ca3838"
+            }
+        ],
+        "min": 0,
+        "max": "200",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 830,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8c85626141424870",
+        "type": "ui-gauge",
+        "z": "c97600c5743cf14d",
+        "name": "Coolant Temperature",
+        "group": "05a462b0cf99d3e6",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Coolant Temp",
+        "units": "°C",
+        "icon": "coolant-temperature",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "-40",
+                "color": "#2f95bb"
+            },
+            {
+                "from": "60",
+                "color": "#79b1ab"
+            },
+            {
+                "from": "100",
+                "color": "#ca3838"
+            }
+        ],
+        "min": "-40",
+        "max": "120",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 880,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "7e27fbc9254ee84c",
+        "type": "ui-gauge",
+        "z": "c97600c5743cf14d",
+        "name": "Throttle Position",
+        "group": "e79ee6bac316da24",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Throttle Position",
+        "units": "%",
+        "icon": "car-turbocharger",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#a7d9db"
+            },
+            {
+                "from": "50",
+                "color": "#2a3560"
+            },
+            {
+                "from": "90",
+                "color": "#ca3838"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 860,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "f738c0c70352312d",
+        "type": "ui-gauge",
+        "z": "c97600c5743cf14d",
+        "name": "Battery Voltage",
+        "group": "e79ee6bac316da24",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "gtype": "gauge-battery",
+        "gstyle": "needle",
+        "title": "Battery Voltage",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800"
+            },
+            {
+                "from": "70",
+                "color": "#5cd65c"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 860,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "02348aea755c9935",
+        "type": "ui-dropdown",
+        "z": "c97600c5743cf14d",
+        "group": "a8e0ef50f11b5878",
+        "name": "Select Car Brand",
+        "label": "Select Car Brand :",
+        "tooltip": "",
+        "order": 2,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "Toyota",
+                "value": "Toyota",
+                "type": "str"
+            },
+            {
+                "label": "Honda",
+                "value": "Honda",
+                "type": "str"
+            },
+            {
+                "label": "BWM",
+                "value": "BWM",
+                "type": "str"
+            },
+            {
+                "label": "Benz",
+                "value": "Benz",
+                "type": "str"
+            },
+            {
+                "label": "Nissan",
+                "value": "Nissan",
+                "type": "str"
+            },
+            {
+                "label": "Suzuki",
+                "value": "Suzuki",
+                "type": "str"
+            },
+            {
+                "label": "Audi",
+                "value": "Audi",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "1ef350c513703905"
+            ]
+        ]
+    },
+    {
+        "id": "1ef350c513703905",
+        "type": "ui-text",
+        "z": "c97600c5743cf14d",
+        "group": "a8e0ef50f11b5878",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "name": "Car Brand Display",
+        "label": "Car Brand :",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": true,
+        "font": "Verdana,Verdana,Geneva,sans-serif",
+        "fontSize": "20",
+        "color": "#000000",
+        "wrapText": false,
+        "className": "",
+        "x": 470,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "45996f70a9bbcf34",
+        "type": "ui-text",
+        "z": "c97600c5743cf14d",
+        "group": "a8e0ef50f11b5878",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Error Codes",
+        "label": "Error Codes",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 850,
+        "y": 240,
+        "wires": []
     }
 ]
