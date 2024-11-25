@@ -2675,7 +2675,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{\"RPM\":2500,\"Speed\":65,\"CoolantTemp\":85,\"ThrottlePos\":45,\"BatteryVoltage\":13.6,\"ErrorCodes\":\"P0300\"}",
+        "payload": "{\"RPM\":2500,\"Speed\":65,\"CoolantTemp\":85,\"ThrottlePos\":45,\"BatteryVoltage\":13.6,\"ErrorCodes\":\"P0700\"}",
         "payloadType": "str",
         "x": 130,
         "y": 40,
