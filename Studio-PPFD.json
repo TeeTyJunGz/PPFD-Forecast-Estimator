@@ -2236,7 +2236,8 @@
                 "f738c0c70352312d"
             ],
             [
-                "45996f70a9bbcf34"
+                "45996f70a9bbcf34",
+                "beacfc65cdcbfb88"
             ]
         ]
     },
@@ -2474,7 +2475,7 @@
         "name": "Select Car Brand",
         "label": "Select Car Brand :",
         "tooltip": "",
-        "order": 2,
+        "order": 3,
         "width": "4",
         "height": "1",
         "passthru": false,
@@ -2536,7 +2537,7 @@
         "type": "ui-text",
         "z": "c97600c5743cf14d",
         "group": "a8e0ef50f11b5878",
-        "order": 3,
+        "order": 4,
         "width": "2",
         "height": "1",
         "name": "Car Brand Display",
@@ -2558,7 +2559,7 @@
         "type": "ui-text",
         "z": "c97600c5743cf14d",
         "group": "a8e0ef50f11b5878",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "Error Codes",
@@ -2580,7 +2581,7 @@
         "type": "ui-text",
         "z": "c97600c5743cf14d",
         "group": "a8e0ef50f11b5878",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
@@ -2596,5 +2597,46 @@
         "x": 330,
         "y": 240,
         "wires": []
+    },
+    {
+        "id": "beacfc65cdcbfb88",
+        "type": "debug",
+        "z": "c97600c5743cf14d",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "81cd34239eb9a3b6",
+        "type": "inject",
+        "z": "c97600c5743cf14d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"RPM\":2500,\"Speed\":65,\"CoolantTemp\":85,\"ThrottlePos\":45,\"BatteryVoltage\":13.6,\"ErrorCodes\":[\"P0300\",\"P0420\"]}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "3c59665ae017be63"
+            ]
+        ]
     }
 ]
