@@ -2675,5 +2675,30 @@
         "x": 840,
         "y": 320,
         "wires": []
+    },
+    {
+        "id": "507736774f70dd1b",
+        "type": "inject",
+        "z": "c97600c5743cf14d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"RPM\":2500,\"Speed\":65,\"CoolantTemp\":85,\"ThrottlePos\":45,\"BatteryVoltage\":13.6,\"ErrorCodes\":\"P0300\"}",
+        "payloadType": "str",
+        "x": 130,
+        "y": 40,
+        "wires": [
+            [
+                "3c59665ae017be63"
+            ]
+        ]
     }
 ]
