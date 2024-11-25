@@ -2604,7 +2604,7 @@
         "type": "debug",
         "z": "c97600c5743cf14d",
         "name": "debug 30",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2631,7 +2631,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{\"RPM\":2500,\"Speed\":65,\"CoolantTemp\":85,\"ThrottlePos\":45,\"BatteryVoltage\":13.6,\"ErrorCodes\":[\"P0300\"]}",
-        "payloadType": "json",
+        "payloadType": "str",
         "x": 130,
         "y": 80,
         "wires": [
