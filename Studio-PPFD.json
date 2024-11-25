@@ -2237,7 +2237,7 @@
             ],
             [
                 "45996f70a9bbcf34",
-                "beacfc65cdcbfb88"
+                "f210b5d83a722200"
             ]
         ]
     },
@@ -2610,7 +2610,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
+        "x": 1040,
         "y": 280,
         "wires": []
     },
@@ -2636,6 +2636,26 @@
         "wires": [
             [
                 "3c59665ae017be63"
+            ]
+        ]
+    },
+    {
+        "id": "f210b5d83a722200",
+        "type": "function",
+        "z": "c97600c5743cf14d",
+        "name": "function 20",
+        "func": "// Lookup table for some common OBD2 error codes\nconst obd2ErrorCodes = {\n    \"P0001\": \"Fuel Volume Regulator Control Circuit/Open\",\n    \"P0010\": \"A Camshaft Position Actuator Circuit (Bank 1)\",\n    \"P0171\": \"System Too Lean (Bank 1)\",\n    \"P0300\": \"Random/Multiple Cylinder Misfire Detected\",\n    \"P0420\": \"Catalyst System Efficiency Below Threshold (Bank 1)\",\n    \"P0455\": \"Evaporative Emission Control System Leak Detected (Large Leak)\",\n    \"P0500\": \"Vehicle Speed Sensor A Malfunction\",\n    \"P0606\": \"PCM/ECM Processor\",\n    \"P0700\": \"Transmission Control System (Malfunction)\",\n    \"P0720\": \"Output Speed Sensor Circuit Malfunction\",\n    // Add more codes here...\n};\n\n// Check if msg.payload is not None (null or undefined)\nif (msg.payload !== null && msg.payload !== undefined) {\n    let errorCode = msg.payload;  // Assuming msg.payload is the error code (e.g., \"P0171\")\n    let errorDescription = obd2ErrorCodes[errorCode] || \"Unknown error code\";\n\n    // Only return the description if it's a valid error code\n    msg.payload = errorDescription;\n    return msg;\n} else {\n    // If msg.payload is None, return nothing (null)\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 280,
+        "wires": [
+            [
+                "beacfc65cdcbfb88"
             ]
         ]
     }
